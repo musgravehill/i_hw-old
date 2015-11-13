@@ -1,0 +1,18 @@
+
+.cmtedit-button.edit { color: green }
+.cmtedit-button.save { color: green; display:none }
+.cmtedit-button.cancel { color: red; display:none }
+#cmtedit_form { display: none }
+textarea.cmtedit { width:100%; height: 150px }
+
+.comment .content .text-more {
+	border-left:1px solid #DDDEDE;
+	border-right:1px solid #DDDEDE;
+	overflow:hidden;
+	padding:0 25px 5px 10px;
+}
+
+.comment .content .text-more.edit-info {
+	font-size: 10px;
+	color: #999;
+}

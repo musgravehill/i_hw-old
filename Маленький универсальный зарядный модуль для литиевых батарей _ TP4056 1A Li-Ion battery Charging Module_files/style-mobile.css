@@ -1,0 +1,53 @@
+/* Mobile device */
+@media only screen and (max-width:640px)
+{
+    
+    /* Hide sidebar */
+    
+    #sidebar { display:none;}
+    #content-container {margin-right:0px;}
+    #content {margin-right:0px; }
+    .container {  min-width:320px; margin: 0 5px;}
+    
+    .wrap { min-width:320px; padding: 0 5px; }
+    .write {display:none;}
+    .menu li .counter, .sub-menu li .counter {display:none;}
+    .top-menu-top {display:none;}
+    
+    #header { min-width: 320px; }
+    .h_main {display:none;}
+    .h_side {height:71px; float:left;}
+    
+    .sku-info .sku-info-line li.searchsku-link {display:none}
+    .sku-info .sku-info-line li {border-right: 0 none;}
+    
+    .purchase_button , .ilike_button {display:none;}
+
+     .mobile-only {display:inline;}
+     .mobile-only-block {display:block;}
+     
+    
+    .topic .topic-footer li        {border-left: 0 none; font-size: 12px;}
+    .topic .topic-footer li.date   {display:none;} 
+    
+    .topic .topic-footer li.comments-total a span,
+    .topic .topic-footer li.comments-total a {background-image: none;  padding-left: 0px; padding-bottom: 0;}
+
+    .topic .topic-footer li.author, 
+    .topic .topic-footer li.read, 
+    .topic .topic-footer li.comments-total,
+    .topic .topic-footer li.rating { 
+        background-image: none; 
+        padding-top:0; 
+        padding-left:0; 
+        padding-right:0;
+        margin-right:15px;}
+
+    .footer_centering, .additional-materials-list { display:none;}
+    
+    .login_form { width:auto;}
+    .login-popup { width:auto;}
+    
+    .register_text_table tr td:nth-child(2)  {display:none;}
+    .register_text_table td input[type="text"] {width:auto;}
+}
