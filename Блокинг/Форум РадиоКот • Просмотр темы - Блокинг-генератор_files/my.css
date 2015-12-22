@@ -1,0 +1,150 @@
+html,body{background-color:#043C88;margin:0;padding:0; min-width:1200px; background-image: url("http://radiokot.ru/templates/radiokot_zima/images/sneg.png");
+}
+form{margin:0;padding:0;}
+#navigator{width:650px;height:15px;position:absolute;z-index:500;top:200px;left:72px;}
+#news_cnt{position:relative;z-index:150;}
+img,div{}
+#1{margin:0;}
+#2,#3,#4,#5,#6,#7,#8,#9{height:1px;overflow:hidden;background:#FFE3C8;}
+#2,#9{margin:0 5px;}
+#3,#8{margin:0 3px;}
+#4,#7{margin:0 2px;}
+#5,#6{margin:0 1px;}
+#nav_content{padding-left:5px;background:#FFE3C8;font-size:12px;font-family:Verdana;color:#000;}
+#est_star_0,#est_star_1,#est_star_2,#est_star_3,#est_star_4{width:34px;height:29px;cursor:pointer;opacity:0.2px;}
+#kot_txt_fon{width:314px;height:316px;}
+#kot_txt{padding-top:35px;margin-left:15px;margin-right:15px;position:absolute;top:0;width:290px;height:316px;left:0;}
+.right_plata_bg{background:url("http://radiokot.ru/templates/radiokot_zima/images/content/leftcont.png");width:32px;}
+* html .right_plata_bg{background:none !important;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://radiokot.ru/templates/radiokot_zima/images/content/leftcont.png", sizingMethod='scale');}
+.top_content_bg{background:url("http://radiokot.ru/templates/radiokot_zima/images/content/centr_t_f.png");height:52px;}
+* html .top_content_bg{background:none !important;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://radiokot.ru/templates/radiokot_zima/images/content/centr_t_f.png", sizingMethod='scale');}
+.bottom_content_bg{background:url("http://radiokot.ru/templates/radiokot_zima/images/content/centr_b_f.png");height:53px;}
+* html .bottom_content_bg{background:none !important;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://radiokot.ru/templates/radiokot_zima/images/content/centr_b_f.png", sizingMethod='scale');}
+.bottom_plata_bg{background:url("http://radiokot.ru/templates/radiokot_zima/images/content/centr_p_b_t.png");height:13px;}
+* html .bottom_plata_bg{background:none !important;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://radiokot.ru/templates/radiokot_zima/images/content/centr_p_b_t.png", sizingMethod='scale');}
+#main{width:100%;}
+#find_datasheet{position:absolute;width:300px;z-index:52;height:20px;right:20px;top:2px;margin-left:-1px;background-color:#F6CB8B;border-color:#FFE3C8;border-style:solid;border-width:thin;}
+#find_datasheet_form{position:absolute;z-index:3000;width:300px;height:20px;clip:rect(auto auto 20px auto);}
+#collapse{cursor:pointer;font-family:Comic Sans MS;color:green;text-align:center;margin-top:-3px;border-bottom-width:thin;border-bottom-style:solid;border-color:#FFE3C8;}
+#raiting{position:relative;width:100%;height:40px;border-top-color:#E78F0E;border-top-style:solid;border-top-width:thin;}
+#content_forum{width:102%;height:auto;position:relative;left:-10px;top:-100px;z-index:160;}
+
+
+/* œŒƒŒ√Õ¿“‹ ÿ»–»Õ” » ¬€—Œ“” ¬»Àƒ!*/
+#site_name{background:url("http://radiokot.ru/templates/radiokot_zima/images/name.png") no-repeat;width:315px;height:166px;position:absolute;left:450px;top:10px;z-index:40;}
+#site_hne{background:url("http://radiokot.ru/templates/radiokot_zima/images/hne.png") no-repeat;width:550px;height:105px;position:absolute;left:350px;top:118px;z-index:45;}
+#shariki{background:url("http://radiokot.ru/templates/radiokot_zima/images/shariki.png") no-repeat;width:55px;height:190px;position:absolute;left:19px;top:180px;z-index:45;}
+
+
+#rinfo{width:308px;height:80px; color:#FFFFFF;position:relative;top:10px;font-family:Tahoma;font-size:12px;z-index:30;}
+#findbar{width:308px;height:19px;position:relative;top:20px;vertical-align:bottom;z-index:31;}
+#right_cont{float:right;right:15px;position:absolute;top:25px;}
+* html #right_cont{right:10px;}
+#kot_body{background:url("http://radiokot.ru/templates/radiokot_zima/images/kot_body.png") no-repeat;width:118px;height:140px;position:absolute;left:45px;top:82px;z-index:10;}
+#kot_head{background:url("http://radiokot.ru/templates/radiokot_zima/images/head.png") no-repeat;width:213px;height:161px;position:absolute;left:2px;top:-4px;z-index:30;}
+#kot_rraw{background:url("http://radiokot.ru/templates/radiokot_zima/images/rightraw.png") no-repeat;width:50px;height:58px;position:absolute;left:14px;top:160px;z-index:180;}
+#kot_lraw{background:url("http://radiokot.ru/templates/radiokot_zima/images/leftraw.png") no-repeat;width:56px;height:47px;position:absolute;left:145px;top:125px;z-index:180;}
+#kot_hvost{background:url("http://radiokot.ru/templates/radiokot_zima/images/hvost.png") no-repeat;width:151px;height:98px;position:absolute;left:185px;top:77px;z-index:20;}
+#menu{width:650px;height:16px;left:70px;top:175px;position:absolute;z-index:50;}
+#btn1{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn1.png") no-repeat;width:54px;height:16px;position:absolute;left:3px;z-index:51;text-align:center;}
+#btn2{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn2.png") no-repeat;width:54px;height:16px;position:absolute;left:60px;z-index:51;text-align:center;}
+#btn3{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn3.png") no-repeat;width:85px;height:16px;position:absolute;left:117px;z-index:51;text-align:center;}
+#btn4{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn4.png") no-repeat;width:54px;height:16px;position:absolute;left:205px;z-index:51;text-align:center;}
+#btn5{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn5.png") no-repeat;width:61px;height:16px;position:absolute;left:262px;z-index:51;text-align:center;}
+#btn6{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn6.png") no-repeat;width:54px;height:16px;position:absolute;left:326px;z-index:51;text-align:center;}
+#btn7{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn7.png") no-repeat;width:78px;height:16px;position:absolute;left:383px;z-index:51;text-align:center;}
+#btn8{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn8.png") no-repeat;width:55px;height:16px;position:absolute;left:464px;z-index:51;text-align:center;}
+#btn9{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn9.png") no-repeat;width:65px;height:16px;position:absolute;left:522px;z-index:51;text-align:center;}
+#btn10{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn10.png") no-repeat;width:55px;height:16px;position:absolute;left:591px;z-index:51;text-align:center;}
+.profile_btn{background:url("http://radiokot.ru/templates/radiokot_zima/images/btn/btn10.png") repeat-x;width:55px;height:16px;z-index:51;text-align:center;padding:0 2ex;}
+#banner_code{position:relative;height:200px;width:100%;top:-100px;z-index:900;}
+#dorogi{width:680px;height:286px;position:absolute;left:15px;top:37px;z-index:17;}
+#plata{width:95%;min-height:90%;height:auto !important;position:absolute;left:41px;top:154px;z-index:16;}
+#content{width:102%;height:auto;position:relative;left:-50px;top:-100px;z-index:160;}
+#centr_field{width:100%;height:auto;position:relative;left:0;top:5px;z-index:70;}
+#content_txt_head{font-size:25px;color:#F28025;margin-top:20px;margin-left:10px;font-family:Tahoma;}
+#content_txt{width:100%;height:auto;z-index:900;font-family:Tahoma;font-size:14px;}
+#coment{background:url("http://radiokot.ru/templates/radiokot_zima/images/content/coment.png") no-repeat;width:100%;height:22px;position:relative;left:50px;top:15px;}
+#coment_txt{width:100%;height:100%;position:relative;left:50px;top:8px;font-family:Tahoma;font-size:12px;}
+#coment_head{background:#E7C38E;width:90%;height:15px;position:relative;left:0;top:15px;font-family:Tahoma;font-size:12px;font-weight:bolder;text-indent:5px;}
+#coment_cont{background:#FFE3CB;width:90%;min-height:50px;height:50px;position:relative;left:0;top:15px;}
+#other{margin-right:-10px;margin-left:10px;position:relative;z-index:5000;}
+#footer{width:100%;top:0;text-align:center;}
+a.mmenu:hover{color:#e76f0c;text-decoration:none;font-family:Verdana;font-size:10px;font-weight:700;}
+a.mmenu:active{color:red;text-decoration:none;font-family:Verdana;font-size:10px;font-weight:700;}
+.Copyright{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:8pt;color:#999;font-style:italic;padding-left:10px;}
+.IndexTopBord{background-color:#D68231;background-image:url(http://radiokot.ru/templates/radiokot_zima/images/indextopbord.png);background-repeat:repeat-x;}
+.IndexTopBord-NY{background-image:url(http://radiokot.ru/templates/radiokot_zima/images/indextopbord-ny.png);background-repeat:repeat-x;}
+.IndexLeftBord{background-color:#D68231;background-image:url(http://radiokot.ru/templates/radiokot_zima/images/indexleftbord.png);background-repeat:repeat-y;}
+.IndexLeftBord-NY{background-image:url(http://radiokot.ru/templates/radiokot_zima/images/indexleftbord.png);background-repeat:repeat-y;}
+.IndexTableBcg{background-color:ffcc99;background-image:url(http://radiokot.ru/templates/radiokot_zima/images/indextablebcg.png);background-repeat:repeat;}
+.IndexHeader1{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:8pt;color:#666;font-weight:400;position:relative;padding-left:5px;padding-right:5px;padding-top:0;width:95%;}
+.mmenuTable{background-color:#FCC;width:100%;}
+.mmenu{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:8pt;color:#555;text-decoration:none;width:100%;height:15px;text-indent:0;}
+.mSubmenuHeader{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:8pt;color:#000;font-weight:700;}
+.NewsColumn{background-image:url(images/newsbcg.png);}
+.CatColumn{background-image:url(images/catcolumn.png);}
+.NewsHeader{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:16pt;color:#C96;font-weight:700;padding-left:10px;padding-right:10px;padding-top:1px;}
+.CatHeader{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:16pt;color:#FC6;font-weight:700;padding-left:10px;padding-right:10px;padding-top:1px;}
+.CatText{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11pt;color:#FC6;padding-left:10px;padding-right:10px;padding-top:1px;}
+.News{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#600;font-weight:400;padding-left:5px;padding-right:5px;}
+.NewsDate{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#600;font-weight:700;padding-left:5px;padding-right:5px;}
+.LastNews{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#900;font-weight:400;padding-left:5px;padding-right:5px;}
+.LastNewsDate{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#C00;font-weight:700;padding-left:5px;padding-right:5px;}
+.Usual50{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#633;font-weight:400;padding-left:50px;padding-right:40px;}
+.Form{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#633;font-weight:700;text-align:center;}
+.LForm{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#633;font-weight:700;text-align:left;padding-left:50px;}
+.Sub{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:7pt;color:#633;font-weight:400;vertical-align:bottom;}
+.Sup{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:7pt;color:#633;font-weight:400;vertical-align:text-top;}
+.Tbl{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#633;font-weight:400;}
+.Warning{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C00;font-weight:700;padding-left:40px;}
+.Rule{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C00;font-weight:700;padding-left:20px;padding-right:20px;background-color:#FF6;width:80%;}
+.Def{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C00;font-weight:700;padding-left:30px;padding-right:50px;background-color:#FFC;display:block;}
+.Examp{font-family:Courier New, Courier, mono;font-size:10pt;color:#000;font-weight:400;background-color:#FFF;padding:10px 20px 10px 30px;}
+.Param{font-family:Courier New, Courier, mono;font-size:10pt;color:#000;font-weight:400;padding:10px 20px 10px 50px;}
+.Newop{font-family:Courier New, Courier, mono;font-size:10pt;color:#339;font-weight:400;background-color:#CFF;padding:10px 20px 10px 30px;}
+.TextBox1{background-color:#FFC;}
+.BottomLink:link{font-family:Times New Roman;font-size:12pt;color:#069;text-decoration:none;font-weight:700;padding-left:20px;}
+.BottomLink:visited{color:#069;font-size:12pt;text-decoration:none;font-weight:700;padding-left:20px;}
+.ArticleHdr{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:16pt;color:#096;font-weight:700;padding-left:30px;padding-top:10px;}
+.ImageName{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#096;font-style:italic;padding-left:10px;padding-top:10px;}
+.SmallHeader{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11pt;color:#000;font-weight:700;padding-left:20px;padding-top:20px;}
+.AfterHeader{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;font-style:italic;color:#666;padding-left:10px;padding-top:10px;}
+.ChapterDescript{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12pt;color:#963;font-style:italic;padding-left:20px;}
+.ChapterMenu:link{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#069;text-decoration:none;font-weight:700;padding-left:50px;line-height:20pt;}
+.ChapterMenu:visited{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#036;text-decoration:none;font-weight:700;padding-left:50px;line-height:20pt;}
+.ChapterMenu:active{color:#09C;text-decoration:none;font-weight:700;padding-left:50px;line-height:20pt;}
+.ChapterMenu:hover{color:#09C;text-decoration:none;font-weight:700;padding-left:52px;line-height:20pt;}
+.ChapterSubMenu:active{color:#9C0;text-decoration:none;font-weight:700;padding-left:100px;line-height:15pt;}
+.ChapterSubMenu:hover{color:#9C0;text-decoration:none;font-weight:700;padding-left:102px;line-height:15pt;}
+.NaviBar{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C60;text-decoration:none;font-weight:700;position:relative;padding-left:5px;padding-right:5px;}
+.NaviBar:visited{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C60;text-decoration:none;font-weight:700;}
+.DocBody:{width:"80%";position:relative;padding-left:40px;padding-right:50px;}
+.Autor{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:8pt;color:#069;text-decoration:none;font-weight:700;padding-left:35px;line-height:15pt;}
+.ChapterSubMenuNO{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:8pt;color:#C60;text-decoration:none;font-weight:700;padding-left:100px;line-height:15pt;}
+input.relief{background-color:#D5FFD5;border-bottom:#329800 1px solid;border-left:#329800 1px solid;border-right:#329800 1px solid;border-top:#329800 1px solid;margin-left:5px;text-align:left;height:19px;vertical-align:bottom;font-size:13px;border-color:#329800;}
+
+.rght_menu{background-color:#fc6;text-align:center;} 
+a.rght_menu_a{font-family:Arial, Helvetica, sans-serif !important;font-size:8pt !important;color:#900 !important;font-weight:700 !important;text-decoration:none !important;}
+a.rght_menu_a:hover{text-decoration:underline !important;}
+
+a.mmenu:link,a.mmenu:visited{color:#E8994A;text-decoration:none;font-family:Verdana;font-size:10px;font-weight:700;}
+.IntextLink,.IntextLink:link,.ITL,.ITL:link{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#f60;text-decoration:none;font-weight:700;}
+.IntextLink:visited,.ITL:visited{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#f90;text-decoration:none;font-weight:700;}
+.IntextLink:active,.IntextLink:hover,.ITL:active,.ITL:hover{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#f30;text-decoration:none;font-weight:700;}
+.IntextImage,.ITI{position:relative;padding:10px 10px 10px 30px;}
+.userlink,.userlink:link,.userlink:visited{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#ff0;text-decoration:none;font-weight:700;}
+.userlink:active,.userlink:hover{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#fC0;text-decoration:none;font-weight:700;}
+.BottomLink:active,.BottomLink:hover{color:#09C;font-size:12pt;text-decoration:none;font-weight:700;padding-left:20px;}
+.SmHdr,.SH{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11pt;color:#000;font-weight:700;padding-left:20px;padding-top:10px;}
+.SmallHeader2,.SH2{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:9pt;color:#633;font-weight:700;padding-left:25px;padding-top:10px;}
+.ChapterSubMenu:link,.ChapterSubMenu:visited{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#690;text-decoration:none;font-weight:700;padding-left:100px;line-height:15pt;}
+.NaviDivider:,.NaviBar:link{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C60;text-decoration:none;font-weight:700;position:relative;padding-left:1px;padding-right:1px;}
+.NaviBar:hover,.NaviBar:active{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#C90;text-decoration:none;font-weight:700;}
+
+.Usual01,.Usual,li{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#633;font-weight:400;padding-left:30px;padding-right:40px;}
+.Usual_bo{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10pt;color:#633;font-weight:400;}
+ 
+
+.baner_text{font-size:11pt;color:#999;font-style:italic;padding-left:11px;}
+.baner_text:link,.baner_text:visited{font-size:11pt;color:#999;text-decoration:none;}
