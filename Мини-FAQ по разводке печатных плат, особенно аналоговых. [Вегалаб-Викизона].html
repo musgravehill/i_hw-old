@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://wzone.vegalab.ru/faq/trace_pcb -->
+<html lang="ru" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="faq,trace_pcb">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wzone.vegalab.ru/lib/exe/opensearch.php" title="Вегалаб-Викизона">
+<link rel="start" href="http://wzone.vegalab.ru/">
+<link rel="contents" href="http://wzone.vegalab.ru/faq/trace_pcb?do=index" title="Все страницы">
+<link rel="alternate" type="application/rss+xml" title="Недавние изменения" href="http://wzone.vegalab.ru/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Текущее пространство имён" href="http://wzone.vegalab.ru/feed.php?mode=list&amp;ns=faq">
+<link rel="alternate" type="text/html" title="Простой HTML" href="http://wzone.vegalab.ru/_export/xhtml/faq/trace_pcb">
+<link rel="canonical" href="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона].html">
+<link rel="stylesheet" type="text/css" href="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='faq';var JSINFO = {"id":"faq:trace_pcb","namespace":"faq"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/js.php"></script><style id="iris-css">.iris-picker{display:block;position:relative}.iris-picker,.iris-picker *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input+.iris-picker{margin-top:4px}.iris-error{background-color:#ffafaf}.iris-border{border-radius:3px;border:1px solid #aaa;width:200px;background-color:#fff}.iris-picker-inner{position:absolute;top:0;right:0;left:0;bottom:0}.iris-border .iris-picker-inner{top:10px;right:10px;left:10px;bottom:10px}.iris-picker .iris-square-inner{position:absolute;left:0;right:0;top:0;bottom:0}.iris-picker .iris-square,.iris-picker .iris-slider,.iris-picker .iris-square-inner,.iris-picker .iris-palette{border-radius:3px;box-shadow:inset 0 0 5px rgba(0,0,0,.4);height:100%;width:12.5%;float:left;margin-right:5%}.iris-picker .iris-square{width:76%;margin-right:10%;position:relative}.iris-picker .iris-square-inner{width:auto;margin:0}.iris-ie-9 .iris-square,.iris-ie-9 .iris-slider,.iris-ie-9 .iris-square-inner,.iris-ie-9 .iris-palette{box-shadow:none;border-radius:0}.iris-ie-9 .iris-square,.iris-ie-9 .iris-slider,.iris-ie-9 .iris-palette{outline:1px solid rgba(0,0,0,.1)}.iris-ie-lt9 .iris-square,.iris-ie-lt9 .iris-slider,.iris-ie-lt9 .iris-square-inner,.iris-ie-lt9 .iris-palette{outline:1px solid #aaa}.iris-ie-lt9 .iris-square .ui-slider-handle{outline:1px solid #aaa;background-color:#fff;-ms-filter:"alpha(Opacity=30)"}.iris-ie-lt9 .iris-square .iris-square-handle{background:0;border:3px solid #fff;-ms-filter:"alpha(Opacity=50)"}.iris-picker .iris-strip{margin-right:0;position:relative}.iris-picker .iris-strip .ui-slider-handle{position:absolute;background:0;margin:0;right:-3px;left:-3px;border:4px solid #aaa;border-width:4px 3px;width:auto;height:6px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.2);opacity:.9;z-index:5;cursor:ns-resize}.iris-strip .ui-slider-handle:before{content:" ";position:absolute;left:-2px;right:-2px;top:-3px;bottom:-3px;border:2px solid #fff;border-radius:3px}.iris-picker .iris-slider-offset{position:absolute;top:11px;left:0;right:0;bottom:-3px;width:auto;height:auto;background:transparent;border:0;border-radius:0}.iris-picker .iris-square-handle{background:transparent;border:5px solid #aaa;border-radius:50%;border-color:rgba(128,128,128,.5);box-shadow:none;width:12px;height:12px;position:absolute;left:-10px;top:-10px;cursor:move;opacity:1;z-index:10}.iris-picker .ui-state-focus .iris-square-handle{opacity:.8}.iris-picker .iris-square-handle:hover{border-color:#999}.iris-picker .iris-square-value:focus .iris-square-handle{box-shadow:0 0 2px rgba(0,0,0,.75);opacity:.8}.iris-picker .iris-square-handle:hover::after{border-color:#fff}.iris-picker .iris-square-handle::after{position:absolute;bottom:-4px;right:-4px;left:-4px;top:-4px;border:3px solid #f9f9f9;border-color:rgba(255,255,255,.8);border-radius:50%;content:" "}.iris-picker .iris-square-value{width:8px;height:8px;position:absolute}.iris-ie-lt9 .iris-square-value,.iris-mozilla .iris-square-value{width:1px;height:1px}.iris-palette-container{position:absolute;bottom:0;left:0;margin:0;padding:0}.iris-border .iris-palette-container{left:10px;bottom:10px}.iris-picker .iris-palette{margin:0;cursor:pointer}.iris-square-handle,.ui-slider-handle{border:0;outline:0}</style>
+<script type="text/x-mathjax-config;executed=true">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/MathJax.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://wzone.vegalab.ru/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://wzone.vegalab.ru/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">.MathJax_Preview .MJXc-math {color: inherit!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXc-script {font-size: .8em}
+.MJXc-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXc-bold {font-weight: bold}
+.MJXc-italic {font-style: italic}
+.MJXc-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXc-largeop {font-size: 150%}
+.MJXc-largeop.MJXc-int {vertical-align: -.2em}
+.MJXc-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXc-display {display: block; text-align: center; margin: 1em 0}
+.MJXc-math span {display: inline-block}
+.MJXc-box {display: block!important; text-align: center}
+.MJXc-box:after {content: " "}
+.MJXc-rule {display: block!important; margin-top: .1em}
+.MJXc-char {display: block!important}
+.MJXc-mo {margin: 0 .15em}
+.MJXc-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXc-denom {display: inline-table!important; width: 100%}
+.MJXc-denom > * {display: table-row!important}
+.MJXc-surd {vertical-align: top}
+.MJXc-surd > * {display: block!important}
+.MJXc-script-box > *  {display: table!important; height: 50%}
+.MJXc-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXc-script-box > *:last-child > * {vertical-align: bottom}
+.MJXc-script-box > * > * > * {display: block!important}
+.MJXc-mphantom {visibility: hidden}
+.MJXc-munderover {display: inline-table!important}
+.MJXc-over {display: inline-block!important; text-align: center}
+.MJXc-over > * {display: block!important}
+.MJXc-munderover > * {display: table-row!important}
+.MJXc-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXc-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXc-mtr {display: table-row!important}
+.MJXc-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXc-mtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-mlabeledtr {display: table-row!important}
+.MJXc-mlabeledtr > .MJXc-mtd:first-child {padding-left: 0}
+.MJXc-mlabeledtr:first-child > .MJXc-mtd {padding-top: 0}
+.MJXc-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXc-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXc-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXc-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXc-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXc-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXc-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXc-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXc-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXc-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXc-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_CHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?rev=2.5.3') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?rev=2.5.3') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">@font-face {font-family: MathJax_AMS; src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff?rev=2.5.3') format('woff'), url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf?rev=2.5.3') format('opentype')}
+</style></head>
+
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+    <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://wzone.vegalab.ru/faq/trace_pcb#dokuwiki__content">Перейти к содержанию</a></li>
+        </ul>
+
+        <h1><a href="http://wzone.vegalab.ru/start" accesskey="h" title="[H]"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/logo.png" width="64" height="64" alt=""> <span>Вегалаб-Викизона</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Инструменты пользователя</h3>
+                <ul>
+                    <li><a href="http://wzone.vegalab.ru/faq/trace_pcb?do=login&amp;sectok=c0d1e7a607cea45e249721ff4f074b05" class="action login" rel="nofollow" title="Войти">Войти</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Инструменты сайта</h3>
+            <form action="http://wzone.vegalab.ru/start" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" placeholder="Поиск" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><button type="submit" title="Поиск">Поиск</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://wzone.vegalab.ru/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="faq:trace_pcb"><select name="do" class="edit quickselect" title="Инструменты"><option value="">Инструменты</option><optgroup label="Инструменты страницы"><option value="revisions">История страницы</option><option value="backlink">Ссылки сюда</option></optgroup><optgroup label="Инструменты сайта"><option value="recent">Недавние изменения</option><option value="media">Управление медиафайлами</option><option value="index">Все страницы</option></optgroup><optgroup label="Инструменты пользователя"><option value="login">Войти</option></optgroup></select><button type="submit" style="display: none;">&gt;</button></div></form>            </div>
+            <ul>
+                <li><a href="http://wzone.vegalab.ru/faq/trace_pcb?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Недавние изменения [R]">Недавние изменения</a></li><li><a href="http://wzone.vegalab.ru/faq/trace_pcb?do=media&amp;ns=faq" class="action media" rel="nofollow" title="Управление медиафайлами">Управление медиафайлами</a></li><li><a href="http://wzone.vegalab.ru/faq/trace_pcb?do=index" class="action index" accesskey="x" rel="nofollow" title="Все страницы [X]">Все страницы</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                            <div class="youarehere"><span class="bchead">Вы находитесь здесь: </span><span class="home"><bdi><a href="http://wzone.vegalab.ru/start" class="wikilink1" title="start">Викизона</a></bdi></span> » <bdi><a href="http://wzone.vegalab.ru/faq/start" class="wikilink1" title="faq:start">Часто задаваемые вопросы</a></bdi> » <bdi><span class="curid"><a href="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона].html" class="wikilink1" title="faq:trace_pcb">Мини-FAQ по разводке печатных плат, особенно аналоговых.</a></span></bdi></div>
+                                </div>
+    
+
+
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Боковая панель</h3>
+                    <div class="content" aria-expanded="true"><div class="group" style="">
+                                                                        
+<p>
+<a href="http://wzone.vegalab.ru/start" class="wikilink1" title="start">Викизона</a>
+</p>
+
+<p>
+<a href="http://wzone.vegalab.ru/faq/start" class="wikilink1" title="faq:start">FAQ</a>
+</p>
+
+<p>
+<a href="http://www.vegalab.ru/" class="urlextern" target="_blank" title="http://www.vegalab.ru" rel="nofollow">Вегалаб</a>
+</p>
+
+<p>
+<a href="http://forum.vegalab.ru/" class="urlextern" target="_blank" title="http://forum.vegalab.ru" rel="nofollow">Форум</a>
+</p>
+<hr>
+
+<p>
+<a href="http://wzone.vegalab.ru/wiki/start" class="wikilink1" title="wiki:start">Справка</a> <img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/icon_question.gif" class="icon" alt=":?:">
+
+
+</p>
+                        <!-- float:left; padding: 0px 8px 8px 0px; -->
+<!-- float:right; padding: 0px 0px 8px 8px; -->
+<div style="float:left; padding: 8px;">
+	<div style="width: 160px; height: 600px;">
+		<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4255738363523687";
+			/* Для викизоны */
+			google_ad_slot = "6743057099";
+			google_ad_width = 160;
+			google_ad_height = 600;
+		//-->
+		</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>  
+</div>                    </div></div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>faq:trace_pcb</span></div>
+
+                <div class="page group" style="min-height: 749px;">
+                                                            <!-- wikipage start -->
+                    
+<h1 class="sectionedit1" id="мини-faq_по_разводке_печатных_плат_особенно_аналоговых">Мини-FAQ по разводке печатных плат, особенно аналоговых.</h1>
+<div class="level1">
+
+<p>
+Коротко о проектировании печатных плат для преимущественно аналоговых устройств.
+</p>
+
+<p>
+Во-первых, несколько слов о разводке цепей питания, особенно при двуполярном питании. 
+Распространенная ошибка: емкости блокировки по «+» и по «-» питаний аналоговых микросхем (напр. ОУ) брошены на земляной слой далеко друг от друга, в результате чего по земляному слою течет контурный ток потребления. «Физика» тут простая - при усилении больших сигналов, выходные каскады практически всех аналоговых микросхем переходят в режим AB, и токи потребления по отдельным («+» и «-») цепям питания начинают содержать много высших гармоник сигнала. При несовпадении мест заземления блокировочных конденсаторов для «+» и «-», эти токи начинают «растекаться» по земляным цепям, формируя помеху в них. Именно поэтому блокировочные емкости от «+» и «-» в подавляющем большинстве случаев надо стараться располагать так, чтобы расстояние между точками их присоединения к земляному слою было минимальным. Еще часто (особенно для микросхем с Rail-to-Rail выходами) имеет смысл при возможности ввести прямую ВЧ блокировку между их выводами «+» и «-» питания. Размещать блокировочные конденсаторы желательно как можно ближе к ИС, для сокращения паразитной индуктивности. При использовании SMD микросхем в относительно крупных корпусах (SOIC-8 и больше) блокировочные емкости часто имеет смысл размещать на обратной стороне платы. Для мелких SMD корпусов (MSOP-8, SOT-23) - обычно лучше на той же стороне, что и сам корпус, чтобы не увеличивать индуктивность из-за переходных отверстий. При использовании же корпусов DIP-8, прямо под них легко влезают несколько SMD конденсаторов типоразмера 1206, а при некотором умении - и 1210. Естественно, площадь образующегося контура протекания токов тоже должна быть минимальной, это само собой разумеется. 
+</p>
+<div class="wrap_round wrap_tip plugin_wrap">
+<p>
+На величине (номинале) керамических конденсаторов, если они используются совместно с оксидными, экономить не следует, т.к. рекомендации по установке «0,1 мкФ» давно устарели - ESR современных оксидных конденсаторов номиналом 100…220 мкФ снизилось до величин менее 0,1 Ома, поэтому для предотвращения появления явного резонанса на индуктивности монтажа (~10…20 нГн) сейчас требуется значительно бОльший номинал «высокочастотных» емкостей, ОТ 0,68…1 мкФ.<br>
+Минимальное значение – <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame"><nobr><span class="math" id="MathJax-Span-1" role="math" style="width: 3.396em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.801em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(0.896em 1000em 3.098em -999.997em); top: -2.199em; left: 0.003em;"><span class="mrow" id="MathJax-Span-2"><span class="mfrac" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 2.503em; height: 0px; margin-right: 0.122em; margin-left: 0.122em;"><span style="position: absolute; clip: rect(3.217em 1000em 4.289em -999.997em); top: -4.521em; left: 50%; margin-left: -0.949em;"><span class="mrow" id="MathJax-Span-4"><span class="mi" id="MathJax-Span-5" style="font-size: 70.7%; font-family: MathJax_Math-italic;">L</span><span class="texatom" id="MathJax-Span-6"><span class="mrow" id="MathJax-Span-7"><span class="mo" id="MathJax-Span-8" style="font-size: 70.7%;"><span style="font-family: STIXGeneral, &#39;Arial Unicode MS&#39;, serif; font-size: 83%; font-style: normal; font-weight: normal;">м</span></span></span></span><span class="texatom" id="MathJax-Span-9"><span class="mrow" id="MathJax-Span-10"><span class="mo" id="MathJax-Span-11" style="font-size: 70.7%;"><span style="font-family: STIXGeneral, &#39;Arial Unicode MS&#39;, serif; font-size: 83%; font-style: normal; font-weight: normal;">о</span></span></span></span><span class="texatom" id="MathJax-Span-12"><span class="mrow" id="MathJax-Span-13"><span class="mo" id="MathJax-Span-14" style="font-size: 70.7%;"><span style="font-family: STIXGeneral, &#39;Arial Unicode MS&#39;, serif; font-size: 83%; font-style: normal; font-weight: normal;">н</span></span></span></span><span class="texatom" id="MathJax-Span-15"><span class="mrow" id="MathJax-Span-16"><span class="mo" id="MathJax-Span-17" style="font-size: 70.7%;"><span style="font-family: STIXGeneral, &#39;Arial Unicode MS&#39;, serif; font-size: 83%; font-style: normal; font-weight: normal;">т</span></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(3.217em 1000em 4.348em -999.997em); top: -3.449em; left: 50%; margin-left: -1.188em;"><span class="mrow" id="MathJax-Span-18"><span class="mo" id="MathJax-Span-19" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-20" style="font-size: 70.7%; font-family: MathJax_Math-italic;">E<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-21" style="font-size: 70.7%; font-family: MathJax_Math-italic;">S<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-22"><span style="display: inline-block; position: relative; width: 0.836em; height: 0px;"><span style="position: absolute; clip: rect(3.336em 1000em 4.17em -999.997em); top: -3.985em; left: 0.003em;"><span class="mi" id="MathJax-Span-23" style="font-size: 70.7%; font-family: MathJax_Math-italic;">R</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.283em; left: 0.539em;"><span class="mn" id="MathJax-Span-24" style="font-size: 50%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span><span class="mo" id="MathJax-Span-25" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(0.836em 1000em 1.253em -999.997em); top: -1.307em; left: 0.003em;"><span style="border-left-width: 2.503em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.25px; vertical-align: 0.003em;"></span><span style="display: inline-block; width: 0px; height: 1.074em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="border-left-width: 0.004em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 2.361em; vertical-align: -0.925em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">\frac{Lмонт}{(ESR^2)}</script>.
+</p>
+</div>
+<p>
+Резисторы в цепях питания каждой ИМС сильно упрощают разводку, т.к. служат перемычками, и позволяют «+» и «-» питания развести вплотную друг к другу, что весьма желательно для снижения излучений сигнальных/выходных токов цепями питания.
+</p>
+
+<p>
+Увеличивать ширину шин питания (до резисторов) в малосигнальных цепях выше примерно 0,5…0,7 мм нет никакого смысла, ширину слаботочных сигнальных проводников (кроме СВЧ согласованных линий) как правило, тоже нет смысла делать больше, чем это нужно для обеспечения технологичности плат (0.127…0.254…0.508 мм в зависимости от возможностей производства). БОльшая ширина лишь увеличивает паразитные емкости. Исключения из этого правила: при разводке плат без металлизации отверстий контактные площадки приходится делать как можно бОльшего размера для обеспечения механической прочности, с той же целью на однослойных платах уширяют дорожки там, где это возможно. Если есть место, то шины земли (а иногда и питания) вполне можно уширять, вплоть до сплошной «заливки» медью (формирование полигонов). При этом важно, чтобы не образовывалось большого (по площади) контура протекания ВЧ токов - если шины питания выполнены полигонами, при двуполярном питании полигоны «+» и «-» должны вплотную примыкать друг к другу или располагаться в соседних слоях друг над другом/землей. Аналогичное замечание справедливо для цепей блокировок микросхем - то есть, для цепей, образовываемых выводами питания микросхем, блокировочными конденсаторами и «земляными» проводниками.
+</p>
+
+<p>
+Далее, весьма желательно разделять «сигнальную» и «силовую» земли, чтобы избежать протекания токов питания/нагрузки/помех по «сигнальной» земле. В простых (чисто аналоговых) схемах это элементарно делается на 2-слойной плате, чуть сложнее - на «1,5» слойной (однослойной с навесными шинами/перемычками). В более сложных случаях (запутанная схема, много источников питания, высокая плотность монтажа) проще воспользоваться двухслойной или «2,5» - слойной платой, то есть поставить дополнительные близко расположенные шины питаний/земли на плату, как это часто делалось на платах старых компьютеров и даже в хорошей бытовой технике. Если нет требований по жестким условиям эксплуатации и в схеме нет высокоомных или особо критичных к паразитным емкостям цепей, то в большинстве случаев сегодня наиболее практичным вариантом будет использование многослойной платы (особенно, если серия невелика).
+</p>
+
+<p>
+Как уже говорилось, для подавления перекрестных помех по «земле» в низкочастотных устройствах цепи «земли» следует разделять на «сигнальные» (для разводки которых, как правило, используется правило «звезды», с использованием проводников обычной ширины) и «силовые» (которые лучше разводить «сеткой», широкими трассами - полигонами или выполнять в виде по возможности цельного слоя). Соединяют их в одной точке («мекке»), обычно около «земли» входного (иногда - выходного) разъема. В многоканальных устройствах можно сделать несколько «сигнальных» земель, свою для каждого канала. 
+</p>
+
+<p>
+В ВЧ устройствах есть своя специфика - там, как правило, нужна минимальная индуктивность именно «сигнальной» земли, однако «развязать» сигнальную и силовую земли практически невозможно (из-за сильной индуктивной связи), поэтому их, как правило, не разделяют, а объединяют в общий сплошной слой без сколько-нибудь больших разрезов.
+</p>
+
+<p>
+Существует также изящный (но весьма трудоемкий) метод подавления помех по «земле» без явного разделения земель, особенно полезный при использовании двусторонних плат - максимальное сохранение цельного слоя «земли» на одной из сторон (т.е. фактически однослойная разводка схемы на другой стороне, с минимумом «перемычек»), тщательный анализ контуров протекания токов питания по этой земляной плоскости и нахождение эквипотенциальных точек, т.е. точек, разность потенциалов между которыми при протекании по «земле» токов в цепях питания/нагрузки остается близкой к нулю. Эти точки и используются в качестве выводов «сигнальной» земли. Вид контуров протекания токов при необходимости можно изменять, вводя дополнительные разрезы или наоборот, делая перемычки в возникших по условиям разводки разрезах земляного слоя.
+</p>
+
+<p>
+Самое подробное изучение вопросов топологии/протекания токов и т.п. было выполнено при создании методик проектирования устройств, устойчивых к ЭМИ импульсу, возникающему при взрыве ядерных боеприпасов или ЭМИ-генераторов импульсного действия. К сожалению, публикации на эту тему разрознены, и к тому же часто до сих пор «под грифом». Одну из иллюстративных статей я отсканировал, но не могу сюда прикрутить - выбран лимит на число вложений.
+</p>
+
+<p>
+О конструировании ПП.
+Необходимо сразу отметить, что иногда встречающийся прямолинейный подход - «чем больше слоев - тем лучше» - для чисто аналоговых (а частично и для цифровых) схем «не катит». Слишком много привходящих факторов.
+</p>
+
+<p>
+Одно/двухслойные ПП на гетинаксе/стеклотекстолите без металлизации отверстий - в настоящее время адекватны только для очень простых устройств в большой (»10000) серии. Главные минусы - низкая надежность в жестких условиях эксплуатации (из-за отслоения контактных площадок/проводников при механических вибрациях и термоциклах, набора влаги/флюсов через стенки отверстий), а также сложность (и дороговизна) качественной разводки сколько-нибудь сложных схем. Плотность монтажа низкая (обычно не более 3…4 выводов на квадратный сантиметр общей площади платы). Достоинство - крайняя простота и дешевизна в производстве (при больших объемах и проектных нормах порядка 0.38 мм - менее $0.3/кв. дм) за счет отсутствия металлизации и возможности замены сверления отверстий их пробивкой.
+</p>
+
+<p>
+Двухслойные ПП с металлизацией отверстий - наиболее надежны в жестких условиях эксплуатации, имеют самые лучшие «изоляционные» свойства, наименьшие паразитные емкости проводников. Могут быть изготовлены с наименьшей общей толщиной и с наиболее жесткими проектными нормами, наиболее прочны механически при равной толщине. Но организовывать сплошные слои земли/питания на них сложно, обычно удается сделать более-менее сплошным только один слой, как правило, «земли», и то при плотной разводке это требует немалых трудозатрат.
+Однако тот факт, что достаточно плотная (с шагом порядка сантиметра), даже не очень регулярная, решетка межсоединений «земли»/питаний по эффективному импедансу (паразитной индуктивности) мало уступает сплошному слою вплоть до частот порядка 60…100 мегагерц, позволяет обходиться двухслойными (наиболее надежными) платами при разработке достаточно сложных и плотно скомпонованных устройств (с плотностью выводов 10…12 и более на кв. см. общей площади платы). При грамотной разводке, естественно.
+</p>
+
+<p>
+Главный минус двухслоек - трудоемкость (дороговизна) разработки действительно качественной топологии. Эквивалент платы, которая на 4-6 слоях разводится по типовым инструкциям студентом в течение нескольких часов (нередко в полуавтоматическом режиме), в двухслойном исполнении требует от нескольких дней работы квалифицированного специалиста. Внесение даже относительно небольших изменений в двухслойном варианте, в отличие от многослойного, может оказаться нетривиальным и потребовать почти полной переделки проекта.
+Поэтому применение двухслойных плат для сложных устройств оправданно в основном в двух случаях.
+Первый случай - обеспечение предельно высокой надежности и улучшение «аналоговых» характеристик платы (минимизация утечек, паразитных емкостей и т.п.).
+Второй случай - достаточно большой тираж устройства, когда разница в цене плат и уменьшение потерь на брак после сборки перекрывают рост стоимости разработки/доводки конструкции. Разница в цене 2 и 4…6-слойных печатных плат с проектными нормами 0.127 в промышленных количествах составляет всего $1.6…2 за кв. дм, брак многослоек хорошего качества после печной пайки порядка нескольких десятых долей процента, поэтому идея сэкономить, применив двухслойку, может сработать только при тираже от ~500…1000 штук.
+В мелкой же серии, как правило, проще и на круг дешевле сделать многослойку, несмотря на то, что «аналоговые» свойства (типа паразитных емкостей на единицу площади проводника и качества изоляции) из-за меньших толщин диэлектрика и ряда других причин у них существенно (в разы) хуже, чем у двухслойных плат. По этим причинам в настоящее время повышение коммутационных возможностей ПП стараются производить не столько за счет роста числа слоев свыше 4…6 (8), сколько путем ужесточения проектных норм - это снижает емкости проводников. Сегодняшний стандарт на ширину проводников и зазор между ними - 0.127…0.102 мм, уже не редкость и 0.076. Советские «0.3…0.25 мм» - для плат под обычные условия применения давно стали достоянием истории. Соответственно, двухслойная плата, но с проектными нормами 0.102…0.076 обычно позволяет обеспечить бОльшую плотность цепей, чем 4-слойная с проектными нормами 0.15…0.25. Причина далеко не пропорционального роста плотности разводки при увеличении числа слоев состоит в том, что контактные площадки переходных отверстий, диаметр которых намного больше ширины проводника, «рубят» каналы трассировки (одно отверстие мешает прокладке ~3 трасс в каждом из слоев).
+Использование многослойных плат становится технически необходимым в основном при создании сильно высокочастотных (» 200 МГц) и одновременно плотно скомпонованных цифровых и цифро-аналоговых устройств (чисто аналоговые, типа радиочастотных усилителей/модуляторов/детекторов, прекрасно живут и на двух слоях) или при применении микросхем с высокой плотностью выводов (особенно в корпусах BGA).
+</p>
+
+<p>
+Основная проблема многослоек, кроме худших параметров изоляции - значительно худшая долговременная надежность контактов к внутренним слоям в жестких условиях эксплуатации (вибрации, механические нагрузки, термоциклирование), особенно когда это отверстия для впайки механически нагруженных штыревых компонентов (например, разъемов). Электротест тут не очень помогает, т.к. выявить все платы с потенциально ненадежными переходными отверстиями сразу после изготовления (и забраковать) практически невозможно. Вызвано это тем, что контакт к внутренним слоям в подавляющем большинстве случаев осуществляется только по тонкому (обычно не более 35 мкм, сейчас чаще 18 мкм) торцу фольги в отверстии. Разница в температурных коэффициентах расширения и модуля Юнга диэлектрика и меди при вибрациях и термоциклировании приводят к образованию отслоений/срезов металлизации. В «мягких» условиях это сказывается меньше, однако деградация плат в эксплуатации остается одной из основных причин отказов, к примеру, материнских плат ноутбуков. Причина разницы в надежности соединений с внешними и внутренними слоями в том, что при металлизации отверстий в производстве плат, металлом покрываются не только стенки отверстий, но и дорожки на внешних слоях, образуя своего рода «пустотелую заклепку». Именно поэтому в жестких условиях эксплуатации двухслойка оказывается гораздо надежнее многослоек - даже отслоение металлизации от стенок отверстий не ведет к нарушению контактов. Существует технология изготовления многослоек склейкой уже просверленных и металлизированных двухслойных заготовок, когда переходы между парными слоями столь же надежны, как и в двухслойках, и при этом не занимают места на остальных слоях. Но такая технология дорога, сильнее подвержена ошибкам совмещения слоев и не очень проста в разводке, поэтому используется редко.
+Большинство многослойных плат в мире производится с только сквозными отверстиями (плюс иногда микровиа, см. ниже). Ранее (до широкого распространения технологии microvia) было также популярно применение «глухих» отверстий, когда отверстие в плате сверлится не насквозь, а только на небольшую глубину - для формирования переходов с наружных на один-два нижележащих слоя. Для повышения надежности контакта к внутренним слоям, кстати, часто перед металлизацией специально травят диэлектрик (растравливают отверстия), чтобы фольга внутренних слоев слегка выступила внутрь отверстия и лучше покрывалась при металлизации (при применении такой технологии внутри металлизированных отверстий видны небольшие сужения в местах выхода фольги внутреннего слоя). В сочетании с дублированием отверстий это позволяет гарантировать достаточную для критических приложений надежность контактов.
+Существуют и «эксклюзивные» варианты, к примеру, мне однажды пришлось делать 18-слойную ПП (точнее, многокристальный модуль) общей толщиной 2.6 мм с несколькими видами диэлектриков, проектными нормами проводник/зазор в одном из слоев вплоть до 0.038 мм, скрытыми микропереходами и диаметром сквозных переходных отверстий менее 0.1 мм. Однако надежность этих плат по термоциклированию оказалась существенно ниже (чего изготовитель и не скрывал), а стоимость и сроки поставки - много выше, чем для типовых решений.
+Практически при разводке многослойных плат внутренние слои желательно отдавать под цепи земли/питания, разводя сигнальные проводники на внешних слоях, а также по возможности дублировать переходные отверстия, ведущие на внутренние слои, тем более что это снижает паразитную индуктивность цепей земли/питания. Естественно, надежность контакта в любых переходных отверстиях можно повысить путем их дублирования при разработке топологии, для ответственных цепей это иногда даже прямо предписывается правилами проектирования.
+</p>
+
+<p>
+Требования по повышению плотности монтажа при сохранении надежности в производстве BGA корпусов и портативной техники привели к разработке технологии микропереходов (microvia), когда кроме обычных (сквозных) переходных отверстий на плате с одной или обоих сторон формируются (обычно лазером) глухие отверстия-переходы на нижележащий слой, металлизируемые в одном цикле с металлизацией сквозных отверстий. Размер контактной площадки под такой переход (0.2…0.35 мм) гораздо меньше, чем под сквозное или «глухое» отверстие, и не нарушается трассировка в остальных слоях. К тому же в ряде случаев microvia может быть размещен прямо на контактной площадке SMD элемента без риска ухода заметной части припоя в отверстие ввиду его малого размера и глубины (не более 0.1…0.15 мм). Это очень сильно повышает плотность разводки, т.к. обычные переходные отверстия на площадках SMD элементов размещать, как правило, нельзя (или приходится применять т.н. «забивку» или закрытие отверстий медью, что сложно и дорого). Microvia можно также сформировать и во внутренних слоях, но это существенно сложнее и дороже в производстве.
+</p>
+
+<p>
+Несколько слов про толщину меди и покрытия плат. Основная часть плат делается на материалах с толщиной фольги 35, 18 и 9 мкм, при этом во время металлизации отверстий на наружных слоях наращивается еще по 15-25 мкм меди (в отверстиях должно быть ~ 20 мкм). Платы с проектными нормами 0.127 и менее часто делаются на материале с толщиной фольги ~9 мкм (чем тоньше фольга, тем меньше искажение формы рисунка из-за бокового подтрава проводников). Беспокоиться о «малости сечения меди» не стоит, т.к. печатные проводники ввиду хорошего охлаждения допускают гораздо бОльшие плотности тока (~100 А/кв.мм), чем монтажный провод (3…10 А/кв. мм). Итоговая толщина во внешних слоях за счет осаждения меди при металлизации отверстий, естественно, оказывается больше, чем у исходной фольги. Cопротивление плоских проводников зависит от их геометрии в плане по простому закону: сопротивление квадрата х число квадратов. Сопротивление квадрата не зависит от его абсолютного размера, а только от толщины и проводимости материала. То есть, сопротивление проводника шириной 0,25 мм и длиной 10 мм (т.е. 40 квадратов) такое же, как при ширине 2,5 и длине 100. Для медной фольги 35 мкм это около 0,0005 Ом/квадрат. На промышленных платах при металлизации отверстий на фольгу наращивается дополнительный слой меди, так что сопротивление квадрата падает еще процентов на 20 по сравнению с приведенным выше. Облуживание же, даже «жирное», мало влияет на сопротивление, его цель - повысить теплоемкость проводников, чтобы они не сгорали от кратковременного ударного тока. Применяя коррекцию фотошаблонов (т.е. вводя поправки на подтравы) и анизотропное травление, изготовителям удается обеспечить производство плат с толщиной исходной фольги до 30-40% от проектных норм, т.е. при использовании самой толстой фольги 105 мкм (а с учетом осаждения меди - где-то 125-130 мкм) проектные нормы могут быть только от 0.3…0.35 мм.
+</p>
+
+<p>
+Более существенным ограничением для силовых схем является то, что допустимый ток, пропускаемый через переходное отверстие, зависит в основном от его диаметра, так как толщина металлизации в нем невелика (15…25 мкм) и, как правило, не зависит от толщины фольги. Для отверстия диаметром 0.5 мм при толщине платы 1.5 мм допустимый среднеквадратичный ток порядка 0.4 А, для 1 мм - примерно 0.75 А. При необходимости пропустить по переходным отверстиям бОльший ток рациональным решением будет использование не одного большого, а набора мелких переходных отверстий, особенно при их плотном размещении в «шахматном» или «сотовом» порядке - в вершинах сетки из ромбов или шестиугольников. Дублирование переходных отверстий также дает выигрыш в надежности, поэтому часто применяется и в критических цепях (в том числе сигнальных) при разработке аппаратуры для особо ответственных применений (например, систем жизнеобеспечения).
+</p>
+
+<p>
+Покрытия проводников плат бывают изолирующие и/или защитные. «Паяльная маска» - это защитное изолирующее покрытие, в котором сформированы окна в местах контактных площадок. Проводники могут быть оставлены медными, или покрыты слоем металла, защищающего их от коррозии (оловом/припоем, никелем, золотом и пр.). Каждый вид покрытия имеет достоинства и недостатки. Покрытия бывают тонкослойные, толщиной в доли микрона (как правило, химические), и толстослойные (гальванические, горячее лужение). Паяльную маску лучше всего наносить на голую медь или тонкослойное покрытие, при ее нанесении на луженые дорожки она держится хуже и при пайке проявляется капиллярный эффект - затекание припоя/отрывы маски. Золотое покрытие бывает обоих видов, химическое (тонкое) и гальваническое (требующее для своего выполнения электрического соединения проводников, например, на разъеме). В крупносерийном производстве также популярен вариант покрытия чисто медных (нелуженых) контактных площадок плат флюсоподобным лаком (organic coating, OSP). Выбор вида покрытия зависит от технологии монтажа и типа деталей. Для ручного монтажа (и автоматического при деталях типоразмера от 0805 и крупнее) в подавляющем большинстве случаев оптимальный вариант - горячее лужение площадок (HASL) с маской по меди. Для более мелких деталей и автоматического монтажа, если нет требований по особо малым утечкам на плате, один из лучших вариантов - химическое (иммерсионное) золото (Flash Gold) или иммерсионное олово. Химзолото стоит в нормальном мире очень дешево, практически столько же, сколько горячее лужение, и при этом обеспечивает идеально ровные посадочные места для элементов, без бугорков припоя. Однако при изготовлении плат в РФ зачастую лучше заказывать покрытие не иммерсионным золотом, а иммерсионным оловом или серебром - их растворы не так экономят. При пайке плат с тонкими покрытиями, в том числе Flash Gold, их надо паять быстро и/или заливать нейтральным флюсом во избежание окисления меди через поры покрытия, а при автоматической пайке - желательно еще и использовать среду нейтрального газа (азот, фреон).
+</p>
+
+<p>
+Ниже приложена наиболее доходчивая (на мой взгляд) литература по данному вопросу, а также пример двухслойной компьютерной платы разработанного мной около 10 лет измерителя микропрофилей (профилометра), в которой меры по обеспечению качества топологии применены без фанатизма, только частично. Однако и этого оказалось достаточно, чтобы безо всяких экранировок, в работающем ПК с его помехами (и собственной силовой частью - управлением коллекторным двигателем) обеспечить разрешение в несколько атомов, многократно превзойдя требования ТЗ (использованные ОУ - всего лишь TL084/LM324). Прибор выпускался до самого последнего времени и был единственным в РФ профилометром 1 класса точности. 
+</p>
+<ol>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/10.pdf" class="media mediafile mf_pdf" title="faq:minifaq_pcb:10.pdf (1.2 MB)">Проектирование аппаратной части</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/an-342.pdf" class="media mediafile mf_pdf" title="faq:minifaq_pcb:an-342.pdf (468.3 KB)">Analog Signal-Handling for High Speed and Accuracy by A. Paul Brokaw (Analog Device AN-342)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/an280.pdf" class="media mediafile mf_pdf" title="faq:minifaq_pcb:an280.pdf (2.1 MB)">Mixed Signal Circuit Techniques (Analog Device AN-280)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/barns_dzh_yelektronnoe_konstruirovanie_metody_borby_s_pome.djvu" class="media mediafile mf_djvu" title="faq:minifaq_pcb:barns_dzh_yelektronnoe_konstruirovanie_metody_borby_s_pome.djvu (1.8 MB)">Дж. Барнс Электронное конструирование: Методы борьбы с помехами</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/emc_anm085.pdf" class="media mediafile mf_pdf" title="faq:minifaq_pcb:emc_anm085.pdf (236.7 KB)">EMC Improvement Guidelines (Atmel ANM085)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/ott_genri_u._metody_podavlenija_pomex_v_ehlektronnyx_sistemax.djvu" class="media mediafile mf_djvu" title="faq:minifaq_pcb:ott_genri_u._metody_podavlenija_pomex_v_ehlektronnyx_sistemax.djvu (3.1 MB)">Отт Генри У. Методы подавления помех в электронных системах</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/szza009.pdf" class="media mediafile mf_pdf" title="faq:minifaq_pcb:szza009.pdf (372.8 KB)">PCB Design Guidelines For Reduced EMI (Texas Instruments SZZA009)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/pcbbot.zip" class="media mediafile mf_zip" title="faq:minifaq_pcb:pcbbot.zip (1.5 MB)">Образец ПП слой bottom</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/pcbtop.zip" class="media mediafile mf_zip" title="faq:minifaq_pcb:pcbtop.zip (2 MB)">Образец ПП слой top</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://wzone.vegalab.ru/_media/faq/minifaq_pcb/an_345.pdf" class="media mediafile mf_pdf" title="faq:minifaq_pcb:an_345.pdf (456 KB)">AN_345 - Выполнение "земель"</a></div>
+</li>
+</ol>
+<div class="wrap_rightalign plugin_wrap">
+<p>
+Сергей Агеев ака <a href="http://forum.vegalab.ru/member.php?u=1591" class="urlextern" target="_blank" title="http://forum.vegalab.ru/member.php?u=1591" rel="nofollow">sia_2</a>
+</p>
+</div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>faq/trace_pcb.txt</bdi> · Последние изменения: 2015/08/07 11:32 (внешнее изменение)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Инструменты страницы</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://wzone.vegalab.ru/faq/trace_pcb?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="История страницы [O]"><span>История страницы</span></a></li><li><a href="http://wzone.vegalab.ru/faq/trace_pcb?do=backlink" class="action backlink" rel="nofollow" title="Ссылки сюда"><span>Ссылки сюда</span></a></li><li><a href="http://wzone.vegalab.ru/faq/trace_pcb#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Наверх [T]"><span>Наверх</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" target="_blank"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP" target="_blank"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" target="_blank"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" target="_blank"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" target="_blank"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Мини-FAQ по разводке печатных плат, особенно аналоговых. [Вегалаб-Викизона]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if lte IE 8 ]></div><![endif]-->
+
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div></div></body></html>
