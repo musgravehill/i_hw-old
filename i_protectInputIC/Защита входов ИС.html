@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)http://eewiki.ru/wiki/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%B2%D1%85%D0%BE%D0%B4%D0%BE%D0%B2_%D0%98%D0%A1 -->
+<html lang="ru" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Защита входов ИС — eeWiki - открытая энциклопедия по электронике</title>
+
+<p>Все (ну, почти все) знают, что нехорошо оставлять "висящими"
+входы CMOS - микросхем. Неподключенные входы не только
+генерируют шум от хаотичного переключения но служат причиной
+потребления большого тока и служат причиной "защелкивания" ИС.
+Для устранения такой ситуации достаточно между таким входом и
+цепью земли или питания включить резистор сопротивлением 100К - 1М.
+На схемах слева это резистор <b>R1</b>.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:189px;"><a href="http://eewiki.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Cur_limiter.gif" class="image"><img alt="" src="./Защита входов ИС — eeWiki - открытая энциклопедия по электронике_files/Cur_limiter.gif" width="187" height="77" class="thumbimage"></a>  <div class="thumbcaption">Ограничитель тока. I<sub>max</sub>=1mA</div></div></div>
+<p>Следующей ступенью защиты является включение последовательно
+со входом токоограничивающего резистора <b>R2 (Рис.1)</b>.
+Он работает совместно со встроенными в CMOS-элемент защитными диодами.
+Если ток через диоды не превышает 1-2 мА, то все хорошо. В ответственных
+применениях резистор R2 заменяется двусторонним ограничителем тока на
+специальных depletion-mode транзисторах Supertex. Диапазон входного
+напряжения такого ограничителя достигает 500 вольт в обоих направлениях.
+<br clear="all">
+</p>
+<table cellspacing="0">
+<tbody><tr valign="top">
+<td width="50%">
+<div class="thumb tleft"><div class="thumbinner" style="width:178px;"><a href="http://eewiki.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Din2.gif" class="image"><img alt="" src="./Защита входов ИС — eeWiki - открытая энциклопедия по электронике_files/Din2.gif" width="176" height="138" class="thumbimage"></a>  <div class="thumbcaption">Рис. 2</div></div></div>
+<p>Если помеха слишком сильна, надо защищать сами диоды.
+С этой целью параллельно внутренним кремниевым подключают
+внешние диоды Шоттки <b>V1 и V2 (Рис.2)</b>. Так как падение
+напряжения у них меньше, внутренние диоды отключены.
+Это уже достаточно бронебойная схема. Для защиты аналоговых цепей
+применяют диоды BAS116, BAV170, BAV199, BAW156 с низким током утечки.
+</p>
+</td>
+<td style="padding-left:20px">
+<div class="thumb tleft"><div class="thumbinner" style="width:178px;"><a href="http://eewiki.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Din3.gif" class="image"><img alt="" src="./Защита входов ИС — eeWiki - открытая энциклопедия по электронике_files/Din3.gif" width="176" height="138" class="thumbimage"></a>  <div class="thumbcaption">Рис. 3</div></div></div>
+<p>Но нет предела совершенству. Еще можно добавить емкость
+<b>C1 (Рис.3)</b>, которая вместе с <b>R2</b> образует ФНЧ
+и повышает устойчивость к кратковременным импульсам.
+Если защищается логический вход, то необходимо применять логику
+со входным гистерезисом типа 7414, потому что обычная логика
+не любит заваленных фронтов на входе.
+</p>
+</td>
+</tr>
+<tr valign="top">
+<td>
+<div class="thumb tleft"><div class="thumbinner" style="width:251px;"><a href="http://eewiki.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Din1.gif" class="image"><img alt="" src="./Защита входов ИС — eeWiki - открытая энциклопедия по электронике_files/Din1.gif" width="249" height="136" class="thumbimage"></a>  <div class="thumbcaption">Рис. 4</div></div></div>
+<p>Если добавочно защитить вход с помощью дросселя и TVS,
+то теоретически (при правильном выборе номиналов) ваше
+устройство сможет выдержать прямое попадание молнии.
+Cхема окончательно защищенного входа
+как никогда близка к совершенству.
+За которым паранойя и распад личности.
+</p>
+</td>
+<td style="padding-left:20px">
+<div class="thumb tleft"><div class="thumbinner" style="width:267px;"><a href="http://eewiki.ru/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Over_clamp.gif" class="image"><img alt="" src="./Защита входов ИС — eeWiki - открытая энциклопедия по электронике_files/Over_clamp.gif" width="265" height="174" class="thumbimage"></a>  <div class="thumbcaption">Рис. 5 - Ограничители напряжения.</div></div></div>
+<p>Еще один способ состоит в ограничении входного напряжения на выводе ИС,
+при условии, что это не вносит искажений в обрабатываемый сигнал. ADI и Maxim
+выпускают интегральные ограничители, основанные на схеме последовательного
+включения MOSFET-транзисторов, показанного на схеме 5. Такие схемы обладают
+небольшой утечкой и очень хорошими защитными свойствами при обработке
+аналоговых сигналов.
+</p>
+</body>
+</html>

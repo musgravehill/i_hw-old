@@ -1,0 +1,3410 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://geektimes.ru/post/253984/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=1024" name="viewport">
+
+    
+
+    <title>О развязке питания с примерами / Geektimes</title>
+
+      <meta name="description" content="Когда я участвовал в проведении конкурса 7400, я понял, что многим из представленных логических схем для надежной работы не хватает простейших защитных элементов. Одним из самых часто встречающихся...">
+      <meta name="keywords" content="развязка, decoupling, блокировочный конденсатор, bypass capacitor, цифровая электроника">
+
+      <meta property="og:type" content="article">
+<meta property="og:url" content="https://geektimes.ru/post/253984/"> 
+<meta property="og:title" content="О развязке питания с примерами">
+	<meta property="og:image" content="https://habrastorage.org/storage2/632/b37/955/632b37955c8065b4bad1b91413adc720.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/632b37955c8065b4bad1b91413adc720.jpg"><meta property="og:image" content="https://habrastorage.org/storage2/39f/819/97e/39f81997e656f99c943fdaf3328eb37d.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/39f81997e656f99c943fdaf3328eb37d.jpg"><meta property="og:image" content="https://habrastorage.org/storage2/0b8/eab/a17/0b8eaba17f375be6908d86b69e11f6ae.png">
+	<link rel="image_src" href="./О развязке питания с примерами_files/0b8eaba17f375be6908d86b69e11f6ae.png"><meta property="og:image" content="https://habrastorage.org/storage2/f59/a63/153/f59a63153cc38d2145043fd6a59e336a.png">
+	<link rel="image_src" href="./О развязке питания с примерами_files/f59a63153cc38d2145043fd6a59e336a.png"><meta property="og:image" content="https://habrastorage.org/storage2/ea9/bbd/471/ea9bbd471def3a3e2d7705a4d6d7565f.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/ea9bbd471def3a3e2d7705a4d6d7565f.jpg"><meta property="og:image" content="https://habrastorage.org/storage2/b17/316/8d6/b173168d65f95c87742563564a6a80fb.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/b173168d65f95c87742563564a6a80fb.jpg"><meta property="og:image" content="https://habrastorage.org/storage2/e04/ee8/4e9/e04ee84e90c2bb9d5ccbd93eb10cf608.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/e04ee84e90c2bb9d5ccbd93eb10cf608.jpg"><meta property="og:image" content="https://habrastorage.org/storage2/260/5ea/f57/2605eaf578f9d35778c557b0ec4bba03.png">
+	<link rel="image_src" href="./О развязке питания с примерами_files/2605eaf578f9d35778c557b0ec4bba03.png"><meta property="og:image" content="https://habrastorage.org/storage2/35a/af2/b5c/35aaf2b5c5bc5ffa71c44d003bf46c4e.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/35aaf2b5c5bc5ffa71c44d003bf46c4e.jpg"><meta property="og:image" content="https://habrastorage.org/storage2/722/0a1/121/7220a1121d31ab24892c3456a2728738.jpg">
+	<link rel="image_src" href="./О развязке питания с примерами_files/7220a1121d31ab24892c3456a2728738.jpg">
+	
+<meta property="og:description" content="Когда я участвовал в проведении конкурса 7400, я понял, что многим из представленных логических схем для надежной работы не хватает простейших защитных...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@geektimes_ru">
+
+  <meta property="al:android:url" content="geektimes://post/253984">
+<meta property="al:android:app_name" content="TechMedia">
+<meta property="al:android:package" content="ru.habrahabr">
+<meta property="al:windows_phone:url" content="geektimes://post/253984">
+<meta property="al:windows_phone:app_name" content="TechMedia">
+<meta property="al:windows_phone:app_id" content="460a6bd6-8955-470f-935e-9ea1726a6060">
+  <link rel="canonical" href="./О развязке питания с примерами_files/О развязке питания с примерами.html">
+  <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.geektimes.ru/post/253984/">
+
+
+
+      <link href="./О развязке питания с примерами_files/post_common_css.css" rel="stylesheet" media="all">
+  <link href="./О развязке питания с примерами_files/all.css" rel="stylesheet" media="all">
+
+    <link href="./О развязке питания с примерами_files/global_main.css" rel="stylesheet" media="all">
+
+    <script src="https://an.yandex.ru/system/context.js" type="text/javascript" async=""></script><script type="text/javascript" async="" src="./О развязке питания с примерами_files/watch.js"></script><script async="" src="./О развязке питания с примерами_files/analytics.js"></script><script type="text/javascript" src="./О развязке питания с примерами_files/global_main.js"></script>
+      <script type="text/javascript" src="./О развязке питания с примерами_files/post_common_js.js"></script>
+  <script type="text/javascript" src="./О развязке питания с примерами_files/all.js"></script>
+
+
+    
+    
+
+    <meta name="yandex-verification" content="6f22b39b973dfed8">
+
+
+      
+      <script>
+        var N = 5;
+        var ar_duo1 = Math.floor(Math.random()*N+1);
+      </script>
+      <script type="text/javascript" src="./О развязке питания с примерами_files/adriver.core.2.js"></script>
+
+    <link title="Geektimes / Комментарии к публикации «О развязке питания с примерами»" type="application/rss+xml" rel="alternate" href="https://geektimes.ru/rss/post/253984/">
+
+    <script src="https://geektimes.ru/javascripts/1453985204/_parts/advertising.js"></script>
+
+<script type="text/javascript">
+
+    if (typeof adbl == 'undefined')
+    {
+        var adbl = 'yes';
+    }
+
+    var user_type = "guest";
+
+  var page_type = "publish_ugc";
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-726094-21',  'auto');
+      ga('create', 'UA-726094-24', 'auto', {'name': 'HGM'});
+
+  ga('require', 'displayfeatures');
+  ga('set', 'dimension1', user_type); // user type - guest/readonly/habrauser
+  ga('set', 'dimension2', adbl);
+
+
+
+  ga('set', 'dimension3', page_type);
+
+  if(typeof removeUtms === 'undefined') {
+    removeUtms = function(){};
+  }
+
+  ga('HGM.set', 'dimension1', user_type);
+  ga('HGM.set', 'dimension2', "geektimes");
+  ga('HGM.send', 'pageview');
+
+  ga('send', 'pageview', { 'hitCallback': removeUtms });
+
+</script>
+
+
+
+
+    <meta content="Geektimes" name="apple-mobile-web-app-title">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://geektimes.ru/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://geektimes.ru/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://geektimes.ru/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://geektimes.ru/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://geektimes.ru/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://geektimes.ru/images/favicons/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="https://geektimes.ru/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://geektimes.ru/images/favicons/favicon-16x16.png" sizes="16x16">
+<meta name="application-name" content="Geektimes">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="mstile-144x144.png">
+  </head>
+
+  <body><style type="text/css">#navbar .nav_panel .tab.tab_print:hover path,#navbar .nav_panel .tab.tab_print:hover text { fill: #00abec; } </style>
+    <div class="layout_inner">
+      <div id="TMpanel">
+  <div class="container">
+    <div class="bmenu">
+      <a href="https://tmfeed.ru/?utm_source=tm_geektimes&amp;utm_medium=tm_top_panel&amp;utm_campaign=tm_promo">TM Feed</a>
+      <a href="https://habrahabr.ru/?utm_source=tm_geektimes&amp;utm_medium=tm_top_panel&amp;utm_campaign=tm_promo">Хабрахабр</a>
+      <a href="https://megamozg.ru/?utm_source=tm_geektimes&amp;utm_medium=tm_top_panel&amp;utm_campaign=tm_promo">Мегамозг</a>
+      <a href="https://geektimes.ru/?utm_source=tm_geektimes&amp;utm_medium=tm_top_panel&amp;utm_campaign=tm_promo" class="current">Geektimes</a>
+      <a href="https://toster.ru/?utm_source=tm_geektimes&amp;utm_medium=tm_top_panel&amp;utm_campaign=tm_promo">Тостер</a>
+      <a href="https://moikrug.ru/?utm_source=tm_geektimes&amp;utm_medium=tm_top_panel&amp;utm_campaign=tm_promo">Мой круг</a>
+      <a href="http://freelansim.ru/?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=head_link">Фрилансим</a>
+    </div>
+      <div class="bmenu_inner" style="display:inline-block!important;visibility:visible!important;">
+        <span class="bmenu__label">Спецпроекты:</span>
+        <span class="bmenu slink"><a href="http://bit.ly/1O3dot2" target="_blank" style="color: #00008B">Cобери стартап</a><a href="http://bit.ly/1kZIV7G" target="_blank" style="color: #b19d59">Колонки Marshall</a><a href="http://bit.ly/1Lays5o" target="_blank" style="color: red">Cтартапам БЕСПЛАТНО</a></span>
+        <span id="adriver_banner_465568687"></span>
+      </div>
+  </div>
+</div>
+
+      <div id="layout">
+        <div id="navbar_overlay" class="hidden"></div>
+<div id="navbar" style="bottom: 0px;" class="fixed">
+    <div class="nav_panel">
+        <a href="https://geektimes.ru/" class="logo"></a>
+
+            <a href="https://geektimes.ru/posts/" class="tab tab_menu" data-tab="menu_tab" title="Меню"><span class="g-icon g-icon-burger"></span></a>
+            <a href="https://geektimes.ru/auth/login/" class="tab tab_login" id="login" title="Войти"><span class="g-icon g-icon-lock"></span></a>
+
+        <a href="https://geektimes.ru/post/253984/#" class="scroll_to_up scroll_to_up_for_guest" id="scroll_to_top" title="Наверх"></a>
+    </div>
+
+    <div class="nav_tabs_content ">
+        <div class="nav_tab hidden" id="menu_tab">
+            <div class="title">Разделы</div>
+            <form action="https://geektimes.ru/search/" method="get" class="global_search_form">
+                <div>
+                    <input type="text" name="q" placeholder="Поиск">
+                </div>
+            </form>
+            <div class="menu">
+                <a href="https://geektimes.ru/posts/top/">Публикации</a>
+                <a href="https://geektimes.ru/hubs/">Хабы</a>
+                <a href="https://geektimes.ru/companies/">Компании</a>
+                <a href="https://geektimes.ru/users/">Пользователи</a>
+                <a href="https://geektimes.ru/sandbox/">Песочница</a>
+                <div class="line"></div>
+                <a href="http://toster.ru/" class="new_window">Q&amp;A</a>
+                <a href="https://moikrug.ru/?utm_source=tm_habrahabr&amp;utm_medium=tm_left_menu&amp;utm_campaign=tm_promo" class="new_window">Вакансии</a>
+            </div>
+
+              
+                  <div class="line"></div>
+                  <div class="title">Спецпроекты</div>
+                  <div class="menu">
+                <a href="http://bit.ly/1KGwmEH" target="_blank">$27000 на хостинг</a>
+                
+                <a href="http://bit.ly/1QKAScp" target="_blank">Соберите свой стартап</a>
+                
+                <a href="http://bit.ly/1ZWuLUH" target="_blank">Обзор колонок Marshall</a>
+                </div>
+        </div>
+
+
+    </div>
+</div>
+
+        <div class="inner">
+          <script type="text/javascript">
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    $(document).ready(function(){
+        if (adbl == 'yes' && !readCookie('adb-p'))
+        {
+            $('.dont-add-our-site-pls').show();
+        }
+    });
+</script>
+<div class="dont-add-our-site-pls" style="display: block;">
+    <div class="adb-text">
+        Привет. Кажется, ты используешь AdBlock. Geektimes развивается<br>
+        и существует за счет доходов от рекламы. Добавь нас в исключения.
+    </div>
+    <a class="adb-btn" href="https://geektimes.ru/adblock/">открытое письмо</a>
+    <a class="adb-btn" href="https://geektimes.ru/adblock/?how=1">как отключить</a>
+    <div class="adb-close"></div>
+</div>
+
+
+
+          
+
+            <div class="profile-header">
+
+  <div class="profile-header__summary author-info author-info_profile ">
+    <a href="https://geektimes.ru/users/Ocelot/" class="author-info__image">
+        <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326.jpg" class="author-info__image-pic">
+
+    </a>
+
+    <div class="author-info__desc">
+      <div class="author-info__username">
+         <a href="https://geektimes.ru/users/Ocelot/" class="author-info__name">Dmitry Yakhontov</a> 
+        <a href="https://geektimes.ru/users/Ocelot/" class="author-info__nickname">@Ocelot</a>
+        
+      </div>
+        <div class="author-info__specialization">
+          инженер-системотехник
+        </div>
+    </div>
+  </div>
+
+    <div class="profile-header__stats">
+
+      <div class="karma__widjet voting-wjt js-karma  ">
+
+        <div class="voting-wjt__counter js-karma-mark voting-wjt__counter_positive " title="457 голосов">
+          <div class="voting-wjt__counter-score js-karma_num">388,5</div>
+          <div class="voting-wjt__label">карма</div>
+        </div>
+
+      </div>
+
+      <div class="user-rating" title="Рейтинг пользователя">
+        <div class="user-rating__value">0,3</div>
+        <div class="user-rating__label">рейтинг</div>
+      </div>
+
+    </div>
+
+
+</div>
+
+  <div class="column-wrapper">
+    <div class="content_left js-content_left">
+        <div class="tabs">
+    <ul class="tabs-menu tabs-menu_habrahabr">
+          <li class="tabs-menu__item tabs-menu__item_user-profile tabs-menu__item_inline">
+            <a href="https://geektimes.ru/users/Ocelot/" class="tab-item tab-item_stacked ">
+              <span class="tab-item__value stats">
+                <span class="stats__counters stats__counters_big">
+                  <strong class="counter"></strong>
+                </span>
+                <span class="stats__value">Профиль</span>
+            </span></a>
+          </li>
+          <li class="tabs-menu__item tabs-menu__item_user-profile tabs-menu__item_inline">
+            <a href="https://geektimes.ru/users/Ocelot/topics/" class="tab-item tab-item_stacked tab-item_current">
+              <span class="tab-item__value stats">
+                <span class="stats__counters stats__counters_big">
+                  <strong class="counter">19</strong>
+                </span>
+                <span class="stats__value">Публикации</span>
+            </span></a>
+          </li>
+          <li class="tabs-menu__item tabs-menu__item_user-profile tabs-menu__item_inline">
+            <a href="https://geektimes.ru/users/Ocelot/comments/" class="tab-item tab-item_stacked ">
+              <span class="tab-item__value stats">
+                <span class="stats__counters stats__counters_big">
+                  <strong class="counter">1,4k</strong>
+                </span>
+                <span class="stats__value">Комментарии</span>
+            </span></a>
+          </li>
+          <li class="tabs-menu__item tabs-menu__item_user-profile tabs-menu__item_inline">
+            <a href="https://geektimes.ru/users/Ocelot/favorites/" class="tab-item tab-item_stacked ">
+              <span class="tab-item__value stats">
+                <span class="stats__counters stats__counters_big">
+                  <strong class="counter">139</strong>
+                </span>
+                <span class="stats__value">Избранное</span>
+            </span></a>
+          </li>
+          <li class="tabs-menu__item tabs-menu__item_user-profile tabs-menu__item_inline">
+            <a href="https://geektimes.ru/users/Ocelot/subscription/followers/" class="tab-item tab-item_stacked ">
+              <span class="tab-item__value stats">
+                <span class="stats__counters stats__counters_big">
+                  <strong class="counter">63</strong>
+                </span>
+                <span class="stats__value">Подписчики</span>
+            </span></a>
+          </li>
+    </ul>
+
+  </div>
+
+
+      <div class="post_show">
+        
+
+  <div class="post translation shortcuts_item" id="post_253984">
+    <div class="published"> 3 июля 2012 в 11:01</div>
+    <h1 class="title">
+      
+
+        <span class="post_title">О развязке питания с примерами</span>
+
+      <span class="flag flag_translation">перевод</span>
+      <span class="flag flag_tutorial" title="Обучающий материал">tutorial</span>
+
+      
+
+    </h1>
+
+      <div class="hubs">
+      <a href="https://geektimes.ru/hub/easyelectronics/" class="hub " title="Вы не подписаны на этот хаб">Электроника для начинающих</a><span class="profiled_hub" title="Профильный хаб">*</span>
+  </div>
+
+
+    <div class="content html_format">
+      <img src="./О развязке питания с примерами_files/632b37955c8065b4bad1b91413adc720.jpg" align="left">Когда я участвовал в проведении <a href="http://www.7400contest.com/">конкурса 7400</a>, я понял, что многим из представленных логических схем для надежной работы не хватает простейших защитных элементов. Одним из самых часто встречающихся недостатков конструкции было отсутствие блокировочных емкостей. Позже, прочитав <a href="http://www.maxim-ic.com/app-notes/index.mvp/id/4429">статью о законе Мёрфи</a>, я решил немного написать о развязке и блокировочных конденсаторах.<br>
+<a name="habracut"></a><br>
+Как человек, которого можно назвать старожилом в области электроники, я познакомился с проблемой отсутствия развязки на собственном опыте. Свою первую высокоскоростную схему я собрал, будучи стажером в крупной фирме по производству электроники. Та схема, цифровой частотомер, была собрана на логике семейства 74Fxx и работала на частоте 11&nbsp;МГц (по тем временам это считалось очень много). Это была плата размером 23&nbsp;×&nbsp;16&nbsp;см (Double <a href="http://en.wikipedia.org/wiki/Eurocard_(printed_circuit_board)">Eurocard</a>), содержащая около 40 микросхем, соединенных <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_%D0%BD%D0%B0%D0%BA%D1%80%D1%83%D1%82%D0%BA%D0%BE%D0%B9">монтажом накруткой</a> (<a href="http://en.wikipedia.org/wiki/Wire_wrap">wire wrap</a>). Когда пришло время ее включать, я увидел, что схема не работает, как надо, а выдает полную ерунду.<br>
+<br>
+Проверив несколько раз сборку, я рассказал о проблеме своему руководителю, а он взглянул на плату и сказал: «Не хватает блокировочных конденсаторов. Поставь их на питание около каждой микросхемы, тогда и поговорим.» Совершенно растерянный, я сделал, как было сказано, и — о чудо! — все сразу заработало. Почему, казалось бы, ни на что не влияющая емкость заставила схему работать? Мой руководитель рассказал мне о бросках тока при переключении, об индуктивности проводников и о развязке. Я признаю, что прошло несколько лет, прежде чем я действительно понял, что он тогда говорил, но урок был усвоен: всегда ставить конденсаторы на питание цифровых микросхем.<br>
+<br>
+Термины «блокировочный конденсатор» и «развязка» — не случайные слова, а имеют в данном контексте вполне определенное значение:<br>
+<em>развязка</em> — действие, направленное на (частичное) отделение цепей питания микросхемы от общего источника питания;<br>
+<em>блокировочный конденсатор</em> — конденсатор, установленный таким образом, что он шунтирует питание микросхемы и действует как местный источник питания.<br>
+<br>
+Почему это всё так важно? Взгляните, например, сюда:<br>
+<br>
+<img src="./О развязке питания с примерами_files/39f81997e656f99c943fdaf3328eb37d.jpg"><br>
+<i>Рисунок 1. Отсутствие блокировочноых конденсаторов.</i><br>
+<br>
+Разве это похоже на <em>цифровой</em> сигнал? Такую ерунду вы получите без блокировочных конденсаторов.<br>
+<br>
+Пожалуйста, обратите внимание, что <b>тактовая частота не важна</b>. Проблема заключается в восходящих и спадающих фронтах сигнала. Так, одни и те же соображения применимы для систем, работающих на частоте 1&nbsp;Гц, 20&nbsp;кГц или 50&nbsp;МГц. Используемые частоты в примерах ниже выбраны такими, чтобы их было удобно наблюдать на осциллографе.<br>
+<br>
+Следует отметить, что на высокой частоте сбой наступает быстрее, чем на низкой, за счет большего числа фронтов в единицу времени. Однако это не означает, что низкочастотные схемы будут работать надежно. Это далеко не так, они будут сбоить так же легко, согласно закону Мёрфи. Да, и кстати, вы подумали о ваших маленьких микроконтроллерах, работающих на частоте 16&nbsp;МГц?<br>
+<br>
+<h1>Измерение всплесков тока</h1>Чтобы увидеть, что происходит, нужно измерить токи, протекающие через схему. Вот простая экспериментальная установка, собранная для иллюстрации:<br>
+<br>
+<img src="./О развязке питания с примерами_files/0b8eaba17f375be6908d86b69e11f6ae.png"><br>
+<i>Рисунок 2. Подключение инвертора.</i><br>
+<img src="./О развязке питания с примерами_files/f59a63153cc38d2145043fd6a59e336a.png"><br>
+<i>Рисунок 3. Измерительная схема.</i><br>
+<br>
+Генератор импульсов подключен к инвертору 74HC04, нагруженному на емкость 10&nbsp;пФ. Сигнал на выходе инвертора, TP1, показан на верхней осциллограмме. Источник питания подключен к выводам микросхемы 7 и 14. В разрыв земляного проводника включен токоизмерительный резистор 10&nbsp;Ом.<br>
+<br>
+Напряжение в точке TP2 пропорционально потребляемому микросхемой току и отображается на нижней осциллограмме. Блокировочный конденсатор может быть подключен или отключен при необходимости. Щупы осциллографа снабжены делителями 1:10, так что масштаб осциллограммы по вертикали нужно умножить на 10. Все неиспользуемые входы 74HC04 заземлены. Установка выглядит так:<br>
+<br>
+<img src="./О развязке питания с примерами_files/ea9bbd471def3a3e2d7705a4d6d7565f.jpg"><br>
+<i>Рисунок 4. Установка, собраннная на макетной плате.</i><br>
+<br>
+Рисунок 5 показывает проблемы, возникающие на высоких и низких частотах. Картинки слева — без блокировочного конденсатора, справа — с ним.<br>
+<br>
+<img src="./О развязке питания с примерами_files/b173168d65f95c87742563564a6a80fb.jpg"><br>
+<i>Рисунок 5. Выходное напряжение (верхний канал) и потребляемый ток (нижний канал).<br>
+Сверху — тактовая частота 330&nbsp;кГц, снизу — 3,3&nbsp;МГц.<br>
+Слева — без блокировочного конденсатора, справа — с ним.</i><br>
+<br>
+Некоторые наблюдения из рисунка 5:<br>
+<ul>
+<li>Измеренный ток — это только ток через ногу GND и блокировочный конденсатор. Он не в точности соответствует току, потребляемому микросхемой. Сложно измерять ток через ноги Vcc и GND одновременно <i>(ограничения, накладываемые конструкцией осциллографа. — <b>Прим. перев.</b>)</i>. Однако, измерение тока через вывод GND достаточно для иллюстративных целей.</li>
+<li>При логической «1» на выходе наблюдается высокочастотный «звон». Его размах больше 2&nbsp;В, и выбросы превосходят напряжение питания. Добавление блокировочного конденсатора снижает «звон» до практически несущественного уровня. Выброс все еще остается, но затухает гораздо быстрее</li>
+<li>Фронтам сигнала соответствуют выбросы («иголки») потребляемого тока. Добавление блокировочного конденсатора уменьшает эти выбросы и делает их симметричными при восходящем и спадающем фронтах. Диапазон выбросов от -22 до +45&nbsp;мА без блокировочного конденсатора и от -32 до +36&nbsp;мА — с ним.</li>
+<li>Симметричная форма тока при наличии блокировочного конденсатора говорит, что энергия запасается и извлекается обратно. Это очень важная особенность.</li>
+<li>Остаточный ВЧ звон во многом зависит от положения щупа осциллографа (не показано), что говорит о том, что схема содержит паразитные LC-элементы и радиочастотные антенны. Расположение на плате и взаимное положение соединительных проводов оказывает значительное влияние на амплитуду и частоту колебаний. Эти помехи не могут быть полностью устранены, но их можно сильно уменьшить, правильно разведя печатную плату.</li>
+</ul><br>
+Взглянем на фронты сигнала поближе:<br>
+<br>
+<img src="./О развязке питания с примерами_files/e04ee84e90c2bb9d5ccbd93eb10cf608.jpg"><br>
+<i>Рисунок 6. Фронты выходного напряжения (верхний канал) и потребляемого тока (нижний канал).<br>
+Сверху — задний (спадающий) фронт, снизу — передний (восходящий) фронт.<br>
+Слева — без блокировочного конденсатора, справа — с ним.</i><br>
+<br>
+<h1>Оценка потребляемого тока</h1>Микросхема 74HC04 выполнена по технологии КМОП. Это означает, что статический потребляемый ток близок к нулю. Ток потребляется только при переключениях из «0» в «1» и из «1» в «0». При переключении все нагрузочные и паразитные емкости должны быть перезаряжены. Для экспериментальной схемы нагрузка имеет емкость 10&nbsp;пФ. Сюда нужно добавить емкости выводов и паразитные емкости, которые составляют примерно 5+2&nbsp;пФ. Щуп осциллографа имеет емкость 10&nbsp;пФ, которую тоже нужно учесть. Таким образом, суммарная емкость нагрузки на выходе инвертора примерно 27&nbsp;пФ.<br>
+<br>
+Выходную емкость нужно зарядить от 0 до 5&nbsp;В примерно за 4,3&nbsp;нс. Приняв для простоты, что зарядный ток постоянный, оценим его величину:<br>
+<i>Q = I · t = C · U</i><br>
+<i>I</i> = (5 · 27 · 10<sup>-12</sup>)/(4,3 · 10<sup>-9</sup>) = 31,4 мА<br>
+<br>
+Это означает, что через выход инвертора при каждом переключении втекает или вытекает огромный <i>(по меркам КМОП. — <b>Прим. перев.</b>)</i> ток. Откуда черпается энергия на это? Конечно, из источника питания. На рисунке&nbsp;6 хорошо видно, что ток не возникает мгновенно, а нарастает до определенного уровня, а затем падает снова. Такое поведение явно указывает на наличие индуктивных элементов.<br>
+<br>
+Лучше всего это видно на рисунке&nbsp;6 справа, где ток достигает максимума в тот момент, когда выходное напряжение падает до нуля. Затем ток падает, вызывая провал выходного напряжения. Расчетный ток достаточно хорошо совпадает с измеренным, учитывая, что была проведена лишь простейшая оценка.<br>
+<br>
+<h1>Так зачем же нужен блокировочный конденсатор?</h1>Еще раз внимательно взглянем на нижнюю половину рисунка&nbsp;6. Слева выходное напряжение не доходит до 5&nbsp;В в течение некоторого времени, а справа — достигает почти сразу. Без блокировочного конденсатора микросхеме не хватает мощности питания для формирования крутого фронта, и напряжение застревает на уровне 4 вольт. Блокировочный конденсатор выдает необходимую мгновенную мощность на некоторое время.<br>
+<br>
+Блокировочный конденсатор примерно в 4000 раз больше, чем емкость нагрузки, значит, следует ожидать, что падение напряжения питания будет в 4000 раз ниже <i>(чем размах выходного напряжения. — <b>Прим. перев.</b>)</i> — порядка 1-2&nbsp;мВ.<br>
+<br>
+При обратном переключении, из «1» в «0», как на рисунке&nbsp;6 сверху, блокировочный конденсатор выступает в роли резервуара для принятия выделившейся энергии. Емкость нагрузки разряжается, и ток должен стечь на землю. Тем не менее, энергия не может быть мгновенно передана в источник питания, и блокировочный конденсатор будет временно хранить ее.<br>
+<br>
+<h1>Локальный источник питания</h1>Основной источник питания не может обеспечить микросхему достаточной мощностью из-за индуктивности проводников. Каждый провод обладает паразитной индуктивностью, которая препятствует изменению тока. Из определения индуктивности:<br>
+<i>U = L · dI / dt ⇒ dI = U · dt / L</i><br>
+<br>
+Из этого уравнения видно, что изменение тока обратно пропорционально индуктивности. Иными словами, если возрастает индуктивность, становится труднее изменить ток за заданный промежуток времени, при прочих равных параметрах. Кроме того, изменение тока вызывает падение напряжения на индуктивности. Чем длиннее провод (или дорожка на плате) тем более высокую индуктивность он имеет, тем сильнее он сопротивляется быстрому изменению тока, и тем больше будет падение напряжения.<br>
+<br>
+Блокировочный конденсатор является локальным накопителем энергии. Он всегда должен быть установлен как можно ближе к выводам питания микросхемы, чтобы свести к минимуму индуктивность проводников от конденсатора до микросхемы. Такая схема развязывает общие и локальные цепи питания.<br>
+<br>
+<h1>Увеличиваем нагрузку</h1>Микросхема состоит из шести инверторов, поэтому схему можно изменить так, чтобы увеличить потребляемый ток:<br>
+<br>
+<img src="./О развязке питания с примерами_files/2605eaf578f9d35778c557b0ec4bba03.png"><br>
+<i>Рисунок 7. Экспериментальная схема с дополнительной нагрузкой.</i><br>
+<br>
+<img src="./О развязке питания с примерами_files/35aaf2b5c5bc5ffa71c44d003bf46c4e.jpg"><br>
+<i>Рисунок 8. Выходное напряжение (верхний канал) и потребляемый ток (нижний канал) для схемы с дополнительной нагрузкой.<br>
+Сверху — тактовая частота 330&nbsp;кГц, снизу — 3,3&nbsp;МГц.<br>
+Слева — без блокировочного конденсатора, справа — с ним.</i><br>
+<br>
+<em>Обратите внимание на другой масштаб по оси Y для канала измерения тока, по сравнению с рисунками 5 и 6.</em><br>
+<br>
+Ток через вывод GND теперь имеет выбросы около 70&nbsp;мА при отсутствии блокировочного конденсатора. Если же последний установлен, снова наблюдаем симметричную форму выбросов амплитудой ±50&nbsp;мА при восходящих и спадающих фронтах.<br>
+<br>
+Обратите внимание, что фронт сигнала, как видно на рисунке&nbsp;8 внизу слева, теперь гораздо более пологий. Микросхеме просто-напросто не хватает энергии для быстрого переключения. Установка блокировочного конденсатора (рисунок&nbsp;8 справа) восстанавливает крутизну фронта до приемлемого уровня.<br>
+<br>
+<img src="./О развязке питания с примерами_files/7220a1121d31ab24892c3456a2728738.jpg"><br>
+<i>Рисунок 9. Фронты выходного напряжения (верхний канал) и потребляемого тока (нижний канал).<br>
+Слева — задний (спадающий) фронт, справа — передний (восходящий) фронт.<br>
+Блокировочный конденсатор установлен.</i><br>
+<br>
+Подробное рассмотрение фронтов сигнала выявляет увеличенный по продолжительности выброс тока, что вызвано большими потребностями в энергии. Нагрузка микросхемы примерно в шесть раз выше, чем раньше (первый инвертор нагружен на входные емкости остальных инверторов, которые составляют 5&nbsp;раз по 5&nbsp;пФ).<br>
+<br>
+Это был лишь простой пример — микросхема из шести инверторов. А теперь экстраполируйте вышесказанное на сложную логическую схему, содержащую множество элементов и множество внутренних соединений. В ней очень много паразитных емкостей, которые должны перезаряжаться при каждом изменении входных сигналов. Наконец, представьте себе микроконтроллер, состоящий из многих тысяч вентилей.<br>
+<br>
+<h1>Заземление</h1>Изложенные выше объяснения и иллюстрации должны дать ясное понимание того, что блокировочный конденсатор — важный элемент, выполняющий свою специальную функцию. Он запасает энергию источника питания локально, выдает её при необходимости, а также принимает избытки энергии. <br>
+<br>
+Локальное хранилище энергии постоянно пополняется из основного источника питания через проводник Vcc. В то же время, избыточная энергия должна быть сброшена в источник питания через проводник GND. Сброс энергии в блокировочный конденсатор повышает напряжение на нем, и, по сути, кратковременно создает на схеме локальную область с другим потенциалом. Устранение этого дисбаланса является очень важным и осуществляется при помощи заземления. <i>(Здесь под заземлением понимается не подключение к массе нашей планеты, а соединение с общим проводом источника питания. — <b>Прим. перев.</b>)</i><br>
+<br>
+Печатные платы часто имеют отдельные заземленные слои, которые очень эффективны для соединения элементов с общим проводником источника питания. Хорошо проработанная разводка земли имеет первостепенное значение для сброса избыточной энергии. Но будьте осторожны, в сплошном заземленном слое могут возникать вихревые токи, а многочисленные связи с общим проводом — образовывать т.н. земляные петли.<br>
+<br>
+Всегда будет хорошей идеей обратиться к знакомому разработчику со стажем. Большинство ошибок уже было кем-либо допушено раньше, и нет никакой необходимости повторять их до бесконечности.
+      <div class="clear"></div>
+    </div>
+
+    
+  <ul class="tags icon_tag">
+      <li><a href="https://geektimes.ru/search/?q=%5B%D1%80%D0%B0%D0%B7%D0%B2%D1%8F%D0%B7%D0%BA%D0%B0%5D&amp;target_type=posts" rel="tag">развязка</a>, </li>
+      <li><a href="https://geektimes.ru/search/?q=%5Bdecoupling%5D&amp;target_type=posts" rel="tag">decoupling</a>, </li>
+      <li><a href="https://geektimes.ru/search/?q=%5B%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BD%D0%B4%D0%B5%D0%BD%D1%81%D0%B0%D1%82%D0%BE%D1%80%5D&amp;target_type=posts" rel="tag">блокировочный конденсатор</a>, </li>
+      <li><a href="https://geektimes.ru/search/?q=%5Bbypass%20capacitor%5D&amp;target_type=posts" rel="tag">bypass capacitor</a>, </li>
+      <li><a href="https://geektimes.ru/search/?q=%5B%D1%86%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0%5D&amp;target_type=posts" rel="tag">цифровая электроника</a></li>
+  </ul>
+
+
+      <div class="infopanel_wrapper">
+    <ul class="postinfo-panel postinfo-panel_post" id="infopanel_post_253984">
+
+          <li class="postinfo-panel__item">
+            <div class="voting-wjt voting-wjt_infopanel js-voting  ">
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи.">
+                  <span>↑</span>
+                </button>
+
+              <div class="voting-wjt__counter voting-wjt__counter_positive  js-mark">
+                  <span class="voting-wjt__counter-score js-score" title="Общий рейтинг 75: ↑73 и ↓2">+71</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи.">
+                  <span>↓</span>
+                </button>
+
+            </div>
+          </li>
+
+      <li class="postinfo-panel__item">
+        <div class="views-count_post" title="Просмотры публикации">36,5k</div>
+      </li>
+
+      <li class="postinfo-panel__item">
+        <div class="favorite-wjt favorite">
+            <button type="button" disabled="" class="favorite-wjt__button favorite-wjt__button_disabled" onclick="return false;" title="Только зарегистрированные пользователи могут добавлять публикации в избранное">
+              <span>Добавить в избранное</span>
+            </button>
+          <span class="favorite-wjt__counter js-favs_count" title="Количество пользователей, добавивших публикацию в избранное">359</span>
+        </div>
+      </li>
+
+
+
+
+      <!-- шеринг в соцсети -->
+        <li class="postinfo-panel__item postinfo-panel__item_socials  postinfo-panel__item_socials_right ">
+          <ul class="post-share">
+            <li class="post-share__item">
+              <a href="https://twitter.com/intent/tweet?text=%D0%9E+%D1%80%D0%B0%D0%B7%D0%B2%D1%8F%D0%B7%D0%BA%D0%B5+%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F+%D1%81+%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D0%BC%D0%B8+https://geektimes.ru/p/253984/+via+%40geektimes_ru+%23geektimes" class="post-share__item-link twitter" title="Опубликовать ссылку в Twitter" target="_blank"></a>
+            </li>
+            <li class="post-share__item">
+              <a href="https://vk.com/share.php?url=https://geektimes.ru/post/253984/" class="post-share__item-link vkontakte" title="Опубликовать ссылку во ВКонтакте" onclick="window.open(this.href, &#39;Опубликовать ссылку во Вконтакте&#39;, &#39;width=800,height=300&#39;); return false"></a>
+            </li>
+            <li class="post-share__item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://geektimes.ru/post/253984/" class="post-share__item-link facebook" title="Опубликовать ссылку в Facebook" onclick="window.open(this.href, &#39;Опубликовать ссылку в Facebook&#39;, &#39;width=640,height=436,toolbar=0,status=0&#39;); return false"></a>
+            </li>
+            <li class="post-share__item">
+              <a href="https://getpocket.com/edit?url=https://geektimes.ru/post/253984/" target="_blank" class="post-share__item-link pocket" title="Добавить ссылку в Pocket"></a>
+            </li>
+          </ul>
+        </li>
+
+      <!-- кнопка пожаловаться -->
+    </ul>
+
+  </div>
+
+            <div class="post-type">
+      <span class="post-type_nowrap">
+        <span class="post-type__label post-type__label_translate">Перевод:</span>
+        <a href="http://www.vagrearg.org/?p=decoupling" class="post-type__value">Bertho</a>
+      </span>
+    </div>
+
+
+  <div class="author-info ">
+    <a href="https://geektimes.ru/users/Ocelot" class="author-info__image">
+        <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326.jpg" class="author-info__image-pic">
+    </a>
+
+    <div class="author-info__desc">
+      <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Ocelot" class="author-info__name">Dmitry Yakhontov</a>
+        <a href="https://geektimes.ru/users/Ocelot" class="author-info__nickname">@Ocelot</a>
+
+        <div class="karma__widjet voting-wjt voting-wjt_small js-karma  " title="Карма пользователя">
+
+
+          <div class="voting-wjt__counter voting-wjt__counter_positive">
+            <span class="voting-wjt__label">карма</span>
+            <span class="voting-wjt__counter-score js-karma_num">388,5</span>
+          </div>
+
+        </div>
+
+        <div class="user-rating" title="Рейтинг пользователя">
+          <span class="user-rating__label">рейтинг</span>
+          <span class="user-rating__value">0,3</span>
+        </div>
+
+      </div>
+
+        <div class="author-info__specialization">
+          инженер-системотехник
+        </div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+      </div>
+      
+<!--  AdRiver code START. Type:AjaxJS Site: habrahabr PZ: 0 BN: 13 -->
+<div class="html_banner" id="adriver_banner_290126206"></div>
+<a href="https://special.geektimes.ru/advertising/" class="firskill__label">Реклама</a>
+
+<script type="text/javascript">
+    function show_inner_banner_block300(name, url){
+        if( typeof(name) !== 'undefined'){
+            $('#adriver_banner_290126206').html('<iframe src="https://special.habrahabr.ru/api/htmlblock/'+name+'/?iframe&url='+encodeURIComponent(url)+'" width="100%" height="250"></iframe>')
+        }
+    }
+
+  $(function(){
+
+    var check_scroll_position = function() {
+      var height = $(window).height();
+      var scrollTop = $(window).scrollTop();
+      var scrollBottom = $(window).scrollTop() + height;
+      if($('#adriver_banner_290126206').length){
+        var blockTop = $('#adriver_banner_290126206').position().top;
+      }
+      var show = scrollTop < blockTop && blockTop < scrollBottom;
+
+      if( show ){
+        $( window ).off('scroll', check_scroll_position);
+        $( window ).trigger('show_bn3');
+      }
+    };
+
+    $( window ).on('show_bn3', function(){
+      var keyword = '';
+      if (typeof crtg_content !== 'undefined' && crtg_content) { keyword = crtg_content; }
+      var custom = { 4:ar_duo1 };
+        custom[1] = 'easyelectronics';
+      if ( typeof(adriver) !== 'undefined' ) {
+          new adriver("adriver_banner_290126206", {sid:202254, bt:52, bn:13, custom: custom, keyword: keyword});
+      }
+    });
+
+    $( window ).on('scroll', check_scroll_position);
+
+  });
+</script>
+<!--  AdRiver code END  -->
+
+
+
+
+          
+
+    <div class="similar-posts">
+      <h2 class="similar-posts__title">Похожие публикации</h2>
+
+      <ul class="content-list content-list_posts">
+          <li class="content-list__item">
+            <div class="post-preview">
+              <div class="post-preview__rating">+9</div>
+              <div class="post-preview__desc">
+                <a class="post-preview__link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;similar_posts&#39;, &#39;common&#39;); }" href="https://geektimes.ru/post/266962/">Разработка электроники: Процесс и продукт</a>
+                <span class="post-preview__attrs inline-list inline-list_attrs">
+                  <span class="inline-list__item views-count">11,2k</span>
+                  <span class="inline-list__item favorites-count">83</span>
+                  <span class="inline-list__item comments-count">9</span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="content-list__item">
+            <div class="post-preview">
+              <div class="post-preview__rating">+6</div>
+              <div class="post-preview__desc">
+                <a class="post-preview__link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;similar_posts&#39;, &#39;common&#39;); }" href="https://geektimes.ru/post/267012/">Квест. Как получить государственную электронную цифровую подпись в Беларуси</a>
+                <span class="post-preview__attrs inline-list inline-list_attrs">
+                  <span class="inline-list__item views-count">5,6k</span>
+                  <span class="inline-list__item favorites-count">12</span>
+                  <span class="inline-list__item comments-count">21</span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="content-list__item">
+            <div class="post-preview">
+              <div class="post-preview__rating">+6</div>
+              <div class="post-preview__desc">
+                <a class="post-preview__link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;similar_posts&#39;, &#39;common&#39;); }" href="https://geektimes.ru/post/266352/">Wocket Wallet — безопасный цифровой кошелек и единая кредитная карта</a>
+                <span class="post-preview__attrs inline-list inline-list_attrs">
+                  <span class="inline-list__item views-count">5,5k</span>
+                  <span class="inline-list__item favorites-count">20</span>
+                  <span class="inline-list__item comments-count">13</span>
+                </span>
+              </div>
+            </div>
+          </li>
+      </ul>
+    </div>
+
+
+      
+<form action="https://geektimes.ru/json/favorites/" method="post" id="edit_tags_form" class="hidden">
+  <input type="hidden" name="action" value="add">
+  <input type="hidden" name="ti" value="0">
+  <input type="hidden" name="tt" value="0">
+  <label>Пометьте топик понятными вам метками, если хотите</label>
+  <input type="text" name="tags_string" class="tags_string" autocomplete="off">
+  <div class="description">Метки лучше разделять запятой. Например: <i>общение, социальные сети, myspace.com, подростки, мердок</i></div>
+  <input type="submit" value="Сохранить" class="submit"> или <a href="https://geektimes.ru/post/253984/#" class="close" onclick="return close_edit_tags()">закрыть</a>
+</form>
+
+    </div>
+    <div class="sidebar_right js-sidebar_right">
+        <div class="floNVqouR" style="display: block !important; visibility: visible !important;"><a href="http://special.geektimes.ru/hp/360/" target="_blank" style="width: 300px; height: 500px; display: block !important; visibility: visible !important; margin-bottom: 20px; background: url(&quot;https://habrastorage.org/files/93e/dac/fcb/93edacfcbf0541b1a04079f7e4d570bb.jpg&quot;);"></a>
+  </div>
+
+        
+
+  <div class="live-broadcast live-broadcast_geektimes daily_best_posts">
+    <h2 class="live-broadcast__title">Самое читаемое</h2>
+    <div class="live-broadcast__tabs tabs" id="broadcast_tabs_posts">
+      <ul class="tabs__menu tabs__menu_posts menu menu_inline">
+        <li class="menu__item active"><a href="https://geektimes.ru/post/253984/#broadcast_posts_now" class="menu__item-tab">Сейчас</a></li>
+        <li class="menu__item"><a href="https://geektimes.ru/post/253984/#broadcast_posts_week" class="menu__item-tab">Неделя</a></li>
+        <li class="menu__item"><a href="https://geektimes.ru/post/253984/#broadcast_posts_month" class="menu__item-tab">Месяц</a></li>
+      </ul>
+
+        <div class="tabs__content" id="broadcast_posts_now" style="display: block;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/mvideo/blog/270036/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Семь вопросов о светодиодных лампах</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/mvideo/blog/270036/#comments" class="content-list__item-counter icon_comments">117</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/icover/blog/270082/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">«Air Bonsai» – парящее дерево</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/icover/blog/270082/#comments" class="content-list__item-counter icon_comments">20</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270088/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Российские физики разработали технологию беспроводной передачи энергии с кпд 80%</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270088/#comments" class="content-list__item-counter icon_comments">12</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270054/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Rutracker: подводим предварительные итоги «вечной» блокировки</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270054/#comments" class="content-list__item-counter icon_comments">81</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/audiomania/blog/270068/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Почему некоторые ноты гармонично звучат вместе</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/audiomania/blog/270068/#comments" class="content-list__item-counter icon_comments">16</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270070/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Вышел дистрибутив Tails 2.0</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270070/#comments" class="content-list__item-counter icon_comments">13</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270094/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Чтобы компьютер быстрее работал</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270094/#comments" class="content-list__item-counter icon_comments">8</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270028/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Инженеры ЦЕРН должны распознать и отключить 9000 неиспользуемых кабелей</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270028/#comments" class="content-list__item-counter icon_comments">37</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270072/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Вредонос обманом получает админские права к смартфону и грозит рассылкой вашей истории браузера</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270072/#comments" class="content-list__item-counter icon_comments">16</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/ua-hosting/blog/269954/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Вокруг света за 32 клавиатуры</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/ua-hosting/blog/269954/#comments" class="content-list__item-counter icon_comments">22</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs__content" id="broadcast_posts_week" style="display: none;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269816/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">RuTracker лишил правообладателей возможности закрывать раздачи</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269816/#comments" class="content-list__item-counter icon_comments">120</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269598/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Дом молодой пары в США подвергся нашествию владельцев утраченных телефонов, и никто не знает почему</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269598/#comments" class="content-list__item-counter icon_comments">57</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269638/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Грипп: врачи советуют «Тамифлю». Но, доказательна ли доказательная медицина?</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269638/#comments" class="content-list__item-counter icon_comments">111</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269814/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Британских киноцензоров заставили 10 часов смотреть, как сохнет краска</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269814/#comments" class="content-list__item-counter icon_comments">90</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269718/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Разбор «Марсианина»: Марс, наука, политика</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269718/#comments" class="content-list__item-counter icon_comments">150</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269702/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">ФБР захватило самый крупный сайт детской порнографии в мире и 13 дней распространяло порно</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269702/#comments" class="content-list__item-counter icon_comments">88</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269680/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Сломанный телевизор можно починить светом</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269680/#comments" class="content-list__item-counter icon_comments">24</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/dronk/blog/269526/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Компания Xiaomi. Дешевле без ущерба к качеству уже не бывает</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/dronk/blog/269526/#comments" class="content-list__item-counter icon_comments">14</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269820/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Разбор «Марсианина»: техника</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269820/#comments" class="content-list__item-counter icon_comments">56</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269882/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">ЦРУ рассекретило сотни документов по НЛО</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269882/#comments" class="content-list__item-counter icon_comments">43</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs__content" id="broadcast_posts_month" style="display: none;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268932/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Как весь мир смотрел порно в 2015 — занимательная инфографика от PornHub</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268932/#comments" class="content-list__item-counter icon_comments">63</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268688/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Что меня раздражает в MacBook</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268688/#comments" class="content-list__item-counter icon_comments">586</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268662/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">«Сатурн-5»: как можно утерять технологию ракеты</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268662/#comments" class="content-list__item-counter icon_comments">185</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269298/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Почему биткоин провалился: окончание эксперимента с биткоинами</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269298/#comments" class="content-list__item-counter icon_comments">76</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268778/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Мошенничество при покупке б/у Macbook Pro</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268778/#comments" class="content-list__item-counter icon_comments">68</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269816/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">RuTracker лишил правообладателей возможности закрывать раздачи</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269816/#comments" class="content-list__item-counter icon_comments">120</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268616/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Сколько получают космонавты и астронавты</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268616/#comments" class="content-list__item-counter icon_comments">20</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268582/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">«Умная» винтовка победила профессионального снайпера</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268582/#comments" class="content-list__item-counter icon_comments">79</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/lamptest/blog/268584/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Лучшие светодиодные лампы 2015 года</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/lamptest/blog/268584/#comments" class="content-list__item-counter icon_comments">69</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268864/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;post&#39;); }" class="content-list__item-link">Секс в автомобиле или ещё одна кнопка старт-стоп с ардуино и светодиодами</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268864/#comments" class="content-list__item-counter icon_comments">90</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+  </div>
+
+          
+
+
+        <div class="ya_banners">
+  <div id="yandex_ad"></div>
+  <script type="text/javascript">
+    $('.js-sidebar_right').ready(function(){
+      var contentAreaHeight = $('.js-content_left').outerHeight(true);
+      var sidebarAreaHeight = $('.js-sidebar_right').outerHeight(true) + 250;
+      var sidebarAreaHeight2 = sidebarAreaHeight + 250;
+
+      if ( contentAreaHeight > sidebarAreaHeight2 ) {
+        (function(w, d, n, s, t) {
+          w[n] = w[n] || [];
+          w[n].push(function() {
+            Ya.Direct.insertInto(149513, "yandex_ad", {
+              ad_format: "direct",
+              font_family: "verdana",
+              type: "posterVertical",
+              border_type: "block",
+              limit: 2,
+              title_font_size: 3,
+              border_radius: true,
+              links_underline: false,
+              site_bg_color: "FFFFFF",
+              border_color: "FBE5C0",
+              title_color: "0066CC",
+              url_color: "006600",
+              text_color: "000000",
+              hover_color: "0066FF",
+              sitelinks_color: "0066CC",
+              favicon: true,
+              no_sitelinks: false
+            });
+          });
+          t = d.getElementsByTagName("script")[0];
+          s = d.createElement("script");
+          s.src = "//an.yandex.ru/system/context.js";
+          s.type = "text/javascript";
+          s.async = true;
+          t.parentNode.insertBefore(s, t);
+        })(window, document, "yandex_context_callbacks");
+      }else if (contentAreaHeight > sidebarAreaHeight){
+        (function(w, d, n, s, t) {
+          w[n] = w[n] || [];
+          w[n].push(function() {
+            Ya.Direct.insertInto(149513, "yandex_ad", {
+              ad_format: "direct",
+              font_family: "verdana",
+              type: "posterVertical",
+              border_type: "block",
+              limit: 1,
+              title_font_size: 3,
+              border_radius: true,
+              links_underline: false,
+              site_bg_color: "FFFFFF",
+              border_color: "FBE5C0",
+              title_color: "0066FF",
+              url_color: "006600",
+              text_color: "000000",
+              hover_color: "0066FF",
+              sitelinks_color: "0066FF",
+              favicon: true,
+              no_sitelinks: false
+            });
+          });
+          t = d.getElementsByTagName("script")[0];
+          s = d.createElement("script");
+          s.src = "//an.yandex.ru/system/context.js";
+          s.type = "text/javascript";
+          s.async = true;
+          t.parentNode.insertBefore(s, t);
+        })(window, document, "yandex_context_callbacks");
+      }
+    });
+  </script>
+</div>
+
+        
+        
+        
+    </div>
+  </div>
+
+  <div class="column-wrapper column-wrapper_comments">
+    <div class="content_left">
+        
+  <div class="comments_list " id="comments">
+    <h2 class="title ">
+      Комментарии (<span id="comments_count">23</span>)
+      
+    </h2>
+    
+
+    <ul id="comments-list">
+      
+  <li class="comment_item" id="comment_8455634">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455634">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/imater/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/f65f4ed7a3ef765b7b4d76d839070b85_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/imater/" class="comment-item__username">imater</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 11:21</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455634" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455634" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  voting-wjt__counter_negative">
+                <span class="voting-wjt__counter-score js-score" title="Всего 4: ↑1 и ↓3">–2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format bad bad2">
+          Далёк от практического применения, но очень интересно читать подобные статьи.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455634">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455634 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/f65f4ed7a3ef765b7b4d76d839070b85_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/imater/" class="author-info__nickname">@imater</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455636">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455636">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Zubaru/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/bc3bd89d771434878d997579371db54f_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Zubaru/" class="comment-item__username">Zubaru</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 11:26</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455636" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455636" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 3: ↑3 и ↓0">+3</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          От себя добавлю про конденсаторы: лучше ставить несколько «маленьких» конденсаторов, чем один с большой емкостью, т.к. при параллельном соединении емкости складываются, а паразитная индуктивность и сопротивление не растет. Для быстрых схем паразитная индуктивность — большая проблема.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455636">
+      
+  <li class="comment_item" id="comment_8455638">
+    
+    <span class="parent_id" data-parent_id="8455636"></span>
+
+    <div class="comment_body">
+        <div class="author_banned">НЛО прилетело и опубликовало эту надпись здесь</div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455638">
+      
+  <li class="comment_item" id="comment_8455642">
+    
+    <span class="parent_id" data-parent_id="8455638"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455642">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Keroro/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/728bc80ff7c289293d64733c037e1552_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Keroro/" class="comment-item__username">Keroro</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 12:08</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455642" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455642" data-parent_id="8455638" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455638" class="icon_comment-parent js-comment_parent" data-id="8455642" data-parent_id="8455638" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455642" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 2: ↑2 и ↓0">+2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Есть ещё неплохой аппноут на эту тему: <a href="http://www.intersil.com/data/an/an1325.pdf">Application Note 1325: Choosing and Using Bypass Capacitors</a>, раскрывающий в частности такие вопросы, как влияние типа блокировочного конденсатора (тантал, керамика), его ёмкости и расположения на плате.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455642">
+      
+  <li class="comment_item" id="comment_8455672">
+    
+    <span class="parent_id" data-parent_id="8455642"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455672">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Keroro/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/728bc80ff7c289293d64733c037e1552_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Keroro/" class="comment-item__username">Keroro</a>
+          <time class="comment-item__time_published"> 5 июля 2012 в 07:43</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455672" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455672" data-parent_id="8455642" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455642" class="icon_comment-parent js-comment_parent" data-id="8455672" data-parent_id="8455642" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455672" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 0: ↑0 и ↓0">0</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Чуть не забыл. <a href="http://embedders.org/blog/teap0t/texas-instruments-application-report-sloa069-rus.html">Как (не)надо развязывать высокоскоростные операционные усилители </a><br>
+<br>
+
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455672">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455672 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/728bc80ff7c289293d64733c037e1552_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Keroro/" class="author-info__nickname">@Keroro</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455642 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/728bc80ff7c289293d64733c037e1552_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Keroro/" class="author-info__nickname">@Keroro</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455638 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <span class="user-pic_default user-pic_default_47 user-pic_lilac"></span>
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/kaladhara/" class="author-info__nickname">@kaladhara</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455646">
+    
+    <span class="parent_id" data-parent_id="8455636"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455646">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/BarsMonster/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/0dcfd902b74a7a853e41abc42218b4a9_small.gif" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/BarsMonster/" class="comment-item__username">BarsMonster</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 12:24</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455646" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455646" data-parent_id="8455636" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455636" class="icon_comment-parent js-comment_parent" data-id="8455646" data-parent_id="8455636" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455646" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 2: ↑2 и ↓0">+2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Есть и другой ньюанс — можно ставить керамику разного размеру, например 0.1 и 0.01, чтобы у них резонансная частота не совпадала.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455646">
+      
+  <li class="comment_item" id="comment_8455648">
+    
+    <span class="parent_id" data-parent_id="8455646"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item is_topic_starter" rel="8455648">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__username">Ocelot</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 12:26</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455648" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455648" data-parent_id="8455646" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455646" class="icon_comment-parent js-comment_parent" data-id="8455648" data-parent_id="8455646" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455648" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 2: ↑2 и ↓0">+2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Или в разных корпусах. Чуть подальше от ног — 1206, поближе — 0603, например.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455648">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455648 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Ocelot/" class="author-info__nickname">@Ocelot</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455646 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/0dcfd902b74a7a853e41abc42218b4a9_small.gif" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/BarsMonster/" class="author-info__nickname">@BarsMonster</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455636 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/bc3bd89d771434878d997579371db54f_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Zubaru/" class="author-info__nickname">@Zubaru</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455640">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455640">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/lonelylockley/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/943fef3b8e4e5bc10efbdb73a71a3780_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/lonelylockley/" class="comment-item__username">lonelylockley</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 11:56</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455640" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455640" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 0: ↑0 и ↓0">0</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Натолкнулся на проблему с развязкой питания при сборке простой схемы на Arduino. Использую УЗ датчик HC-SR04 для измерения расстояния и 7сегментный четырехразрядный дисплей BV4513, работающий по последовательному порту для отображения измеренного. Когда к плате подключен только УЗ датчик получаю нормальные показания дальности. Стоит только включить дисплей — схема превращается в генератор случайных чисел. Я пробовал добавлять развязочные конденсаторы в GND линию, но что-то не помогло. Покупать вовсе недешевый осциллограф для того, чтобы разобраться в происходящих там процессах, душит жаба и запал на знакомство с микроконтроллерами из-за этого как-то порастерялся.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455640">
+      
+  <li class="comment_item" id="comment_8455644">
+    
+    <span class="parent_id" data-parent_id="8455640"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item is_topic_starter" rel="8455644">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__username">Ocelot</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 12:10</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455644" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455644" data-parent_id="8455640" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455640" class="icon_comment-parent js-comment_parent" data-id="8455644" data-parent_id="8455640" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455644" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 3: ↑3 и ↓0">+3</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          1. Раскидывать питание на контроллер, датчик и дисплей из одной точки, «звездой».<br>
+2. То же касается земли.<br>
+3. Повесить на питание датчика дроссель (ферритовую бусину).<br>
+4. Следить, чтобы не было длинных сигнальных проводов. Проводники UART очень любят превращаться в антенну и мусорить помехами вокруг. <br>
+5. Может быть, дело в ШИМ-управлении яркостью индикатора? Временно отключить ШИМ можно, установив максимальную яркость. 
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455644">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455644 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Ocelot/" class="author-info__nickname">@Ocelot</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455640 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/943fef3b8e4e5bc10efbdb73a71a3780_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/lonelylockley/" class="author-info__nickname">@lonelylockley</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455650">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455650">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/MarrySun/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/2f7f90bfa51f58491a87516a77d72c80_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/MarrySun/" class="comment-item__username">MarrySun</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 12:33</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455650" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455650" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 1: ↑1 и ↓0">+1</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Объясните, пожалуйста, почему блокировочные конденсаторы в таком случае не встраивают в саму микросхему?
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455650">
+      
+  <li class="comment_item" id="comment_8455652">
+    
+    <span class="parent_id" data-parent_id="8455650"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item is_topic_starter" rel="8455652">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__username">Ocelot</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 12:41</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455652" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455652" data-parent_id="8455650" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455650" class="icon_comment-parent js-comment_parent" data-id="8455652" data-parent_id="8455650" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455652" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 6: ↑6 и ↓0">+6</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          На самом кристалле их не разместишь, слишком много полезного места займут, а на подложке размещают уже давно. Возьмите какой-нибудь процессор, отковырните с него жестяную крышку — вон они, конденсаторы!<br>
+<img src="./О развязке питания с примерами_files/74583d722b72c17f8fabd927fbc024c3.jpg">
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455652">
+      
+  <li class="comment_item" id="comment_8455674">
+    
+    <span class="parent_id" data-parent_id="8455652"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455674">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/VgaCich/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/7c92bb208f53cec876b0b6c53165913b_small.png" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/VgaCich/" class="comment-item__username">VgaCich</a>
+          <time class="comment-item__time_published"> 5 июля 2012 в 07:47</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455674" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455674" data-parent_id="8455652" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455652" class="icon_comment-parent js-comment_parent" data-id="8455674" data-parent_id="8455652" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455674" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 2: ↑2 и ↓0">+2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          А у LGA775 еще и на нижней стороне туча конденсаторов.<br>
+Причем, насколько я помню, на плате все равно тоже стоит куча кондеров возле сокета.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455674">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455674 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/7c92bb208f53cec876b0b6c53165913b_small.png" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/VgaCich/" class="author-info__nickname">@VgaCich</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455652 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Ocelot/" class="author-info__nickname">@Ocelot</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455650 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/2f7f90bfa51f58491a87516a77d72c80_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/MarrySun/" class="author-info__nickname">@MarrySun</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455654">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455654">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/dlinyj/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/96ee60204d466e54362ce4dd180705c2_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/dlinyj/" class="comment-item__username">dlinyj</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 13:50</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455654" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455654" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 3: ↑3 и ↓0">+3</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Золотой пост, спасибо!
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455654">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455654 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/96ee60204d466e54362ce4dd180705c2_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/dlinyj/" class="author-info__nickname">@dlinyj</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455656">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455656">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/coocheenin/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/a883ecf4304fe3282cf806b5377e5541_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/coocheenin/" class="comment-item__username">coocheenin</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 14:07</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455656" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455656" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 2: ↑2 и ↓0">+2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Отличный ликбез! Спасибо за перевод.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455656">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455656 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/a883ecf4304fe3282cf806b5377e5541_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/coocheenin/" class="author-info__nickname">@coocheenin</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455658">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455658">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/RZK333/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/7e82a3b173aee3af4ad52b7f6e363881_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/RZK333/" class="comment-item__username">RZK333</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 15:54</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455658" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455658" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 1: ↑1 и ↓0">+1</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          кому интересна эта тема — ищите книги по кейворду signal integrity.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455658">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455658 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/7e82a3b173aee3af4ad52b7f6e363881_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/RZK333/" class="author-info__nickname">@RZK333</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455660">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455660">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/braindamaged/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/5a85184baf2da89a6af89c348950e496_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/braindamaged/" class="comment-item__username">braindamaged</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 21:07</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455660" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455660" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 1: ↑1 и ↓0">+1</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Wire wrap — отдельная, очень интересная тема. Не сочтите за наглость просьбу — поделитесь опытом по монтажу накруткой, позязя!
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455660">
+      
+  <li class="comment_item" id="comment_8455662">
+    
+    <span class="parent_id" data-parent_id="8455660"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item is_topic_starter" rel="8455662">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/Ocelot/" class="comment-item__username">Ocelot</a>
+          <time class="comment-item__time_published"> 3 июля 2012 в 22:54</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455662" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455662" data-parent_id="8455660" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455660" class="icon_comment-parent js-comment_parent" data-id="8455662" data-parent_id="8455660" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455662" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 0: ↑0 и ↓0">0</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Лично я накруточный монтаж уже не застал, хотя в институте нам про него рассказывали. На практике же применяли сначала планки с лепестками, потом печатные макетки, потом беспаечные breadboard'ы. Но думаю, на хабре найдутся старожилы, которые с радостью расскажут про накрутку из первых рук.<br>
+<br>
+Сейчас эта технология не применяется, по крайней мере, для радиомонтажа (SMD во все поля!). Где-то читал, что соединения накруткой еще используют в телефонии. Господа телефонисты, прокомментируйте, правда ли это? Или обжим победил окончательно и бесповоротно?
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455662">
+      
+  <li class="comment_item" id="comment_8455668">
+    
+    <span class="parent_id" data-parent_id="8455662"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455668">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/postdig/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/4a466d7ec7b2303c2c7f72776b452b4d_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/postdig/" class="comment-item__username">postdig</a>
+          <time class="comment-item__time_published"> 4 июля 2012 в 14:31</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455668" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455668" data-parent_id="8455662" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455662" class="icon_comment-parent js-comment_parent" data-id="8455668" data-parent_id="8455662" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455668" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 2: ↑2 и ↓0">+2</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Когда-то работал в области телефонии и интернет провайдинга, хоть это было уже лет 7 назад, но…<br>
+<br>
+Телефонные кроссы монтируются накруткой до сих пор, по крайней мере те что я видел, в том числе и на свеже монтируемых коммерческих станциях.<br>
+<br>
+Но кабели уже активно сращивали зажимами (вставил концы проводов, щелкнул и готово, концы проводников при этом в геле), однако много раз видел как проф.монтажники делают сращивание 100парного кабеля методом скрутки (каждая пара скручивается определенным образом) с той же скоростью. Это надо видеть.<br>
+<br>
+Кстати, на NAGe в свое время был сравнительный тест качества соединений 2 кусков витой пары UTP.<br>
+Сравнивали скрутку (правильным методом), пайку, и RJ45 соединение. Сравнивали на FLUK-e по потерям и искажениям. Победила скрутка с приличным отрывом. Да, тест был для условий 100 мбит сети.<br>
+<br>
+PS: а сейчас, с современным «волокном в каждый дом» особо уже не поскручиваешь ;)<br>
+
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455668">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455668 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/4a466d7ec7b2303c2c7f72776b452b4d_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/postdig/" class="author-info__nickname">@postdig</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455662 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/e010f70940a5e28f22a7a1c44d3f8326_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/Ocelot/" class="author-info__nickname">@Ocelot</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455676">
+    
+    <span class="parent_id" data-parent_id="8455660"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455676">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/UA3MQJ/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/8b46e4292f586be9b319f9ec997add7e_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/UA3MQJ/" class="comment-item__username">UA3MQJ</a>
+          <time class="comment-item__time_published"> 3 октября 2014 в 01:01<span class="comment-item__time_changed"> (комментарий был изменён)</span></time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455676" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455676" data-parent_id="8455660" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455660" class="icon_comment-parent js-comment_parent" data-id="8455676" data-parent_id="8455660" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455676" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 0: ↑0 и ↓0">0</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Да. Тема интересная, я решил опробовать эту технологию: <a href="http://habrahabr.ru/post/238675/">habrahabr.ru/post/238675/</a><br>
+Вообще, частенько замечаю применение wire wrap в макетах разных проектов, и на кикстартере у кого-то видел.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455676">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455676 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/8b46e4292f586be9b319f9ec997add7e_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/UA3MQJ/" class="author-info__nickname">@UA3MQJ</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455660 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/5a85184baf2da89a6af89c348950e496_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/braindamaged/" class="author-info__nickname">@braindamaged</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455664">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455664">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/slpdmn/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/0ebf1ebfdf8478b823dd65bb6caf2a9c_small.png" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/slpdmn/" class="comment-item__username">slpdmn</a>
+          <time class="comment-item__time_published"> 4 июля 2012 в 00:21</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455664" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455664" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 1: ↑1 и ↓0">+1</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Аж ностальгия замучала ) Могу добавить, что в таких схемах сильно играет способ разводки питания на плате. При нормальной разводке вполне достаточно одной емкости на ряд.<br>
+<br>
+С т.з. практики самое интересное в этой проблеме — количество и емкость кондеров, а этого как раз в статье нет. Примерно прикинуть можно по пиковому току потребления одной микросхемы и длительности фронта, оно как раз даст емкость на один чип. Потом надо умножить на 10 :) 
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455664">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455664 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/0ebf1ebfdf8478b823dd65bb6caf2a9c_small.png" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/slpdmn/" class="author-info__nickname">@slpdmn</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455666">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455666">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/ZlodeiBaal/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/dcf1c7d552d64a8e516aa7d2f10b80da_small.jpg" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/ZlodeiBaal/" class="comment-item__username">ZlodeiBaal</a>
+          <time class="comment-item__time_published"> 4 июля 2012 в 01:28</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455666" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455666" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark voting-wjt__counter_positive ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 1: ↑1 и ↓0">+1</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Так как плотно электроникой никогда не занимался, знал только то, что такие конденсаторы надо ставить. Теперь наглядно увидел почему. Спасибо!
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455666">
+      
+  <li class="comment_item" id="comment_8455670">
+    
+    <span class="parent_id" data-parent_id="8455666"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455670">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/slpdmn/" class="comment-item__avatar">
+              <img src="./О развязке питания с примерами_files/0ebf1ebfdf8478b823dd65bb6caf2a9c_small.png" alt="" class="comment-item__avatar-img">
+          </a>
+          <a href="https://geektimes.ru/users/slpdmn/" class="comment-item__username">slpdmn</a>
+          <time class="comment-item__time_published"> 5 июля 2012 в 00:23</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455670" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+              <span class="icon_comment-tree js-comment_tree" data-id="8455670" data-parent_id="8455666" title="Показать ветку комментариев"></span>
+              <a href="https://geektimes.ru/post/253984/#comment_8455666" class="icon_comment-parent js-comment_parent" data-id="8455670" data-parent_id="8455666" title="Показать предыдущий комментарий"></a>
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455670" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 0: ↑0 и ↓0">0</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          На самом деле это всё немного не так. Т.е. да — емкости нужны, но не всегда, не везде и это зависит от многих факторов, которые автор статьи опустил. Иногда достаточно пары кондеров в дальнем углу, иногда вообще не надо, а иногда приходится их тыкать через каждый чип. Цифровые схемы вообще-то достаточно помехоустойчивая штука и импульсы по питанию может не заметить (и не замечает — они там есть всегда). Поверьте старому электронщику — полностью убрать импульсные помехи по питанию в силовых частях схемы невозможно. Никогда. Это одна из причин, почему у вас в компе разделенное питание на мамке. Но работать это не мешает. И кондеры тоже нужны )
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455670">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455670 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/0ebf1ebfdf8478b823dd65bb6caf2a9c_small.png" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/slpdmn/" class="author-info__nickname">@slpdmn</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455666 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <img src="./О развязке питания с примерами_files/dcf1c7d552d64a8e516aa7d2f10b80da_small.jpg" class="author-info__image-pic">
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/ZlodeiBaal/" class="author-info__nickname">@ZlodeiBaal</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+  <li class="comment_item" id="comment_8455678">
+    
+    <span class="parent_id" data-parent_id="0"></span>
+
+    <div class="comment_body">
+        <div class="info comments-list__item comment-item " rel="8455678">
+
+          <div class="folding-dot-holder"><div class="folding-dot"></div></div>
+
+          <a href="https://geektimes.ru/users/barabanus/" class="comment-item__avatar">
+              <span class="comment-item__avatar-img_default user-pic_pink"></span>
+          </a>
+          <a href="https://geektimes.ru/users/barabanus/" class="comment-item__username">barabanus</a>
+          <time class="comment-item__time_published">23 мая 2015 в 23:19</time>
+
+          <span class="comment-item__controls">
+            <a href="https://geektimes.ru/post/253984/#comment_8455678" class="icon_comment-anchor" title="Ссылка на комментарий"></a>
+
+
+            <span class="js-comment_chidren" title="Вернуться к ответу"></span>
+          </span>
+
+            <div id="voting_8455678" class="voting-wjt voting-wjt_comments js-voting   ">
+
+              <div class="voting-wjt__counter js-mark  ">
+                <span class="voting-wjt__counter-score js-score" title="Всего 0: ↑0 и ↓0">0</span>
+              </div>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_plus js-plus" title="Голосовать могут только зарегистрированные пользователи"><span>↑</span></button>
+
+                <button type="button" disabled="" class="voting-wjt__button voting-wjt__button_minus js-minus" title="Голосовать могут только зарегистрированные пользователи"><span>↓</span></button>
+            </div>
+        </div>
+
+        <div class="message html_format ">
+          Мне кажется, что «блокировочный конденсатор» — плохой перевод «bypass capacitor» и вызывает недоумение: что от чего блокируется? В западной литературе под «blocking capacitor» понимают конденсатор, блокирующий постоянный ток (например, для связи двух каскадов усиления по переменному току).<br>
+<br>
+Лучший перевод — это или «развязывающий конденсатор», или, возможно, «проходной конденсатор» — хотя у нас под проходным понимается немного другое, но суть он отражает хорошо.
+        </div>
+
+        <div class="reply_form_placeholder"></div>
+
+        <div class="reply">
+
+        </div>
+    </div>
+
+    <ul class="reply_comments" id="reply_comments_8455678">
+      
+      
+    </ul>
+
+    <div class="user-popover" style="display: none;">
+      <div class="user-summary user-summary_8455678 user-summary_short">
+        <a href="https://geektimes.ru/users//" class="author-info__image">
+            <span class="user-pic_default user-pic_default_47 user-pic_pink"></span>
+        </a>
+
+          <div class="user-summary__counters">
+
+            <div class="karma__widjet voting-wjt voting-wjt_user-info js-karma  ">
+
+              <div class="voting-wjt__counter js-karma-mark  " title="">
+                <div class="voting-wjt__counter-score js-karma_num"> 0,0 </div>
+                <div class="voting-wjt__label">карма</div>
+              </div>
+
+            </div>
+
+            <div class="statistic statistic_user-rating" title="Рейтинг пользователя">
+              <div class="statistic__value statistic__value_magenta">124</div>
+              <div class="statistic__label">рейтинг</div>
+            </div>
+
+          </div>
+
+        <div class="author-info__username">
+          <a href="https://geektimes.ru/users/barabanus/" class="author-info__nickname">@barabanus</a>
+          
+        </div>
+
+
+      </div>
+    </div>
+
+  </li>
+
+      
+    </ul>
+
+  </div>
+
+
+                <p class="for_users_only_msg">Только зарегистрированные пользователи могут оставлять комментарии. <a href="https://geektimes.ru/auth/login/">Войдите</a>, пожалуйста.</p>
+
+
+    </div>
+    <div class="sidebar_right">
+          
+
+
+  <div class="live-broadcast live-broadcast_geektimes">
+    <h2 class="live-broadcast__title">Что обсуждают</h2>
+    <div class="live-broadcast__tabs tabs" id="broadcast_tabs_comments">
+      <ul class="tabs__menu tabs__menu_comments menu menu_inline">
+        <li class="menu__item active"><a href="https://geektimes.ru/post/253984/#broadcast_comments_now" class="menu__item-tab">Сейчас</a></li>
+        <li class="menu__item"><a href="https://geektimes.ru/post/253984/#broadcast_comments_yesterday" class="menu__item-tab">Вчера</a></li>
+        <li class="menu__item"><a href="https://geektimes.ru/post/253984/#broadcast_comments_week" class="menu__item-tab">Неделя</a></li>
+      </ul>
+
+        <div class="tabs__content" id="broadcast_comments_now" style="display: block;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/icover/blog/270082/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">«Air Bonsai» – парящее дерево</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/icover/blog/270082/#comments" class="content-list__item-counter icon_comments">21</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270046/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Уоренн Баффет мешает Илону Маску заниматься солнечной энергетикой</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270046/#comments" class="content-list__item-counter icon_comments">20</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/mvideo/blog/270036/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Семь вопросов о светодиодных лампах</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/mvideo/blog/270036/#comments" class="content-list__item-counter icon_comments">117</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269966/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">"… сейчас к людям надо помягше, а на вопросы смотреть ширше" — Read &amp; Comment юзеры на «Гиктаймс»</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269966/#comments" class="content-list__item-counter icon_comments">186</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/dronk/blog/270052/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">5 вещей, которые лучше взять с собой на воздушную съемку</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/dronk/blog/270052/#comments" class="content-list__item-counter icon_comments">5</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs__content" id="broadcast_comments_yesterday" style="display: none;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269980/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Типовой китайский увлажнитель — инкубатор для заразы</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269980/#comments" class="content-list__item-counter icon_comments">228</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/prestigio/blog/269996/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">«Крупнейший в мире завод Li-Ion аккумуляторов» — Лиотех — всё</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/prestigio/blog/269996/#comments" class="content-list__item-counter icon_comments">130</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/mvideo/blog/270036/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Семь вопросов о светодиодных лампах</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/mvideo/blog/270036/#comments" class="content-list__item-counter icon_comments">117</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269990/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Искусственный интеллект впервые в мире победил профессионального игрока в го</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269990/#comments" class="content-list__item-counter icon_comments">97</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/270012/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Умный дом, начало</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270012/#comments" class="content-list__item-counter icon_comments">93</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs__content" id="broadcast_comments_week" style="display: none;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/tm/blog/269922/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Read &amp; Comment на «Гиктаймс»</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/tm/blog/269922/#comments" class="content-list__item-counter icon_comments">396</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269834/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Как выбрать рабочий ноутбук (февраль, 2016)</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269834/#comments" class="content-list__item-counter icon_comments">335</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269980/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Типовой китайский увлажнитель — инкубатор для заразы</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269980/#comments" class="content-list__item-counter icon_comments">228</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269914/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">ПК Эльбрус. Мифы и реальность</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269914/#comments" class="content-list__item-counter icon_comments">189</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269966/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">"… сейчас к людям надо помягше, а на вопросы смотреть ширше" — Read &amp; Comment юзеры на «Гиктаймс»</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269966/#comments" class="content-list__item-counter icon_comments">185</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs__content" id="broadcast_comments_month" style="display: none;">
+            <ul class="content-list content-list_comments">
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/268688/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Что меня раздражает в MacBook</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/268688/#comments" class="content-list__item-counter icon_comments">586</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/company/tm/blog/269922/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Read &amp; Comment на «Гиктаймс»</a>&nbsp;&nbsp;<a href="https://geektimes.ru/company/tm/blog/269922/#comments" class="content-list__item-counter icon_comments">396</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269834/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Как выбрать рабочий ноутбук (февраль, 2016)</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269834/#comments" class="content-list__item-counter icon_comments">335</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269980/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Типовой китайский увлажнитель — инкубатор для заразы</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269980/#comments" class="content-list__item-counter icon_comments">228</a>
+                </li>
+                <li class="content-list__item">
+                  <a href="https://geektimes.ru/post/269224/" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" class="content-list__item-link">Герман Греф построит новый Сбербанк на принципах Agile</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269224/#comments" class="content-list__item-counter icon_comments">212</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <script>
+    // hubs to GA
+    window._yaparams = {'hubs':[]};
+      _yaparams['hubs'].push('easyelectronics (Электроника для начинающих)');
+  </script>
+
+
+            <div class="column-wrapper column-wrapper_bottom column-wrapper_bordered">
+    <div class="content_left">
+      
+
+  <div class="live-broadcast live-broadcast_feed">
+    <h2 class="live-broadcast__title live-broadcast__title_feed">Интересные публикации</h2>
+
+    <div class="dropdown dropdown_broadcast">
+      <button type="button" class="btn btn_outline_grey btn_large icon_cog dropdown-toggle" data-toggle="dropdown">
+      </button>
+      <div class="dropdown-container">
+        <ul class="n-dropdown-menu n-dropdown-menu_feed" id="filter">
+          <li class="n-dropdown-menu__item">
+            <label class="checkbox checkbox_custom">
+              <input type="checkbox" class="checkbox__input" name="habrahabr" checked="">
+              <span class="checkbox__label">Хабрахабр</span>
+            </label>
+          </li>
+          <li class="n-dropdown-menu__item">
+            <label class="checkbox checkbox_custom">
+              <input type="checkbox" class="checkbox__input" name="geektimes" checked="">
+              <span class="checkbox__label">Гиктаймс</span>
+            </label>
+          </li>
+          <li class="n-dropdown-menu__item">
+            <label class="checkbox checkbox_custom">
+              <input type="checkbox" class="checkbox__input" name="megamozg" checked="">
+              <span class="checkbox__label">Мегамозг</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="live-broadcast__content">
+      <ul class="content-list content-list_feed" id="list">
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276145/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">IaaS для дела: Как российский бизнес переходит в «облако»</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276145/#comments" class="content-list__item-counter icon_comments">0</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276153/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Сколько Google заплатила за потерянный домен google.com</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276153/#comments" class="content-list__item-counter icon_comments">3</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276151/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">How-to: Объектно-ориентированная система бэктестинга на Python</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276151/#comments" class="content-list__item-counter icon_comments">1</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270088/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Российские физики разработали технологию беспроводной передачи энергии с кпд 80%</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270088/#comments" class="content-list__item-counter icon_comments">10</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276141/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Обходим блокировку сайта DPI двумя скриптами</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276141/#comments" class="content-list__item-counter icon_comments">4</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270068/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Почему некоторые ноты гармонично звучат вместе</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270068/#comments" class="content-list__item-counter icon_comments">15</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276121/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">STM32F4: GNU AS: Подключение дисплея на PCD8544 (Часть 7)</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276121/#comments" class="content-list__item-counter icon_comments">0</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270082/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">«Air Bonsai» – парящее дерево</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270082/#comments" class="content-list__item-counter icon_comments">20</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276135/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Parse.com закрывается</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276135/#comments" class="content-list__item-counter icon_comments">32</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276131/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Размещаем сайт в анонимной сети I2P (+ параноидальный режим)</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276131/#comments" class="content-list__item-counter icon_comments">6</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270070/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Вышел дистрибутив Tails 2.0</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270070/#comments" class="content-list__item-counter icon_comments">13</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/269984/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Новые гаджеты, которые работают с биткоинами</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269984/#comments" class="content-list__item-counter icon_comments">3</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270054/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Rutracker: подводим предварительные итоги «вечной» блокировки</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270054/#comments" class="content-list__item-counter icon_comments">79</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23670/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Игры в деньги: Activision Blizzard и Hearthstone</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23670/#comments" class="content-list__item-counter icon_comments">33</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23676/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Российская интернет-торговля глазами исследователей: покупатели vs продавцы</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23676/#comments" class="content-list__item-counter icon_comments">3</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23662/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">3 бизнес-симулятора MIT: ценообразование продажи соли, развитие экологического стартапа, доминирование игровой платформы</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23662/#comments" class="content-list__item-counter icon_comments">12</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23672/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Вопреки негативным прогнозам экспертов финансовые результаты Alibaba Group вновь на высоте</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23672/#comments" class="content-list__item-counter icon_comments">0</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23668/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Еврокомиссия наводит порядок с налоговым законодательством: Apple и Google выведут на чистую воду в первых рядах</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23668/#comments" class="content-list__item-counter icon_comments">0</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23664/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Как блог Лайфхакер удерживает 6-миллионную аудиторию с помощью советов</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23664/#comments" class="content-list__item-counter icon_comments">3</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270028/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Инженеры ЦЕРН должны распознать и отключить 9000 неиспользуемых кабелей</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270028/#comments" class="content-list__item-counter icon_comments">37</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr hidden" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/275765/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Считаем разностные схемы в Mathcad Express</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/275765/#comments" class="content-list__item-counter icon_comments">17</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23660/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Главный подозреваемый: покупка WiFi-сети «Вымпелкома» выгодна интернет-провайдеру «Эр-телеком»</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23660/#comments" class="content-list__item-counter icon_comments">5</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr hidden" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276091/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Игра для тех, кто учится программировать: Colobot</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276091/#comments" class="content-list__item-counter icon_comments">4</a>
+          </li>
+          <li class="content-list__item content-list__item_habrahabr hidden" data-type="habrahabr">
+            <a href="https://habrahabr.ru/post/276065/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">VirusTotal внедрил дополнительные индикаторы для образов firmware</a>&nbsp;&nbsp;<a href="https://habrahabr.ru/post/276065/#comments" class="content-list__item-counter icon_comments">1</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23656/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Вдохновленный рекордными доходами, Facebook планирует активнее отбирать «хлеб» у Twitter и конкурировать с YouTube</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23656/#comments" class="content-list__item-counter icon_comments">4</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23658/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Планирование продаж сезонных товаров с учетом меняющихся экономических условий</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23658/#comments" class="content-list__item-counter icon_comments">1</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/270004/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Обновление дистрибутива Cubian до последней версии Debian на Allwinner A10/A20</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/270004/#comments" class="content-list__item-counter icon_comments">7</a>
+          </li>
+          <li class="content-list__item content-list__item_megamozg hidden" data-type="megamozg">
+            <a href="https://megamozg.ru/post/23648/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Вас приветствует компания Elasticweb</a>&nbsp;&nbsp;<a href="https://megamozg.ru/post/23648/#comments" class="content-list__item-counter icon_comments">15</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/269906/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">«В глазах зверя» — MLF дает возможность рассмотреть лес изнутри</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269906/#comments" class="content-list__item-counter icon_comments">6</a>
+          </li>
+          <li class="content-list__item content-list__item_geektimes hidden" data-type="geektimes">
+            <a href="https://geektimes.ru/post/269862/" class="content-list__item-link" onclick="if (typeof ga === &#39;function&#39;) { ga(&#39;send&#39;, &#39;event&#39;, &#39;tm_block&#39;, &#39;live_broadcast_activity&#39;, &#39;comment&#39;); }" data-utm="?utm_source=tm_habrahabr&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo">Экспертное мнение: Высокая плотность сверхпроводящего тока в магнитном состоянии FeSe</a>&nbsp;&nbsp;<a href="https://geektimes.ru/post/269862/#comments" class="content-list__item-counter icon_comments">6</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="columns-group columns-group_promo">
+          
+
+  <div class="columns-group__column promo-block promo-block_vacancies">
+  <h2 class="promo-block__title">
+    <a href="https://moikrug.ru/" target="_blank" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="icon_logo_mk"></a>
+    <a href="https://moikrug.ru/vacancies" target="_blank" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="promo-block__title-link">Вакансии</a>
+  </h2>
+
+  <div class="promo-block__content">
+    <ul class="content-list content-list_promo">
+        <li class="content-list__item vacancy ">
+          <a href="https://moikrug.ru/vacancies/1000023545" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="content-list__item-link vacancy__title" style="background-image:none;">Руководитель проектов (Project Manager)</a>
+          <div class="vacancy__attrs attrs">
+            <span class="attrs__item">Москва</span>
+            <span class="attrs__item">Полный рабочий день</span>
+            <strong class="attrs__item">от 80 000 до 120 000 руб.</strong>
+          </div>
+        </li>
+        <li class="content-list__item vacancy ">
+          <a href="https://moikrug.ru/vacancies/1000023544" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="content-list__item-link vacancy__title" style="background-image:none;">Разработчик Python/Django/PostgreSQL</a>
+          <div class="vacancy__attrs attrs">
+            
+            <span class="attrs__item">Полный рабочий день</span>
+            <strong class="attrs__item">от 90 000 до 120 000 руб.</strong>
+          </div>
+        </li>
+        <li class="content-list__item vacancy vacancy_marked">
+          <a href="https://moikrug.ru/vacancies/1000023027" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="content-list__item-link vacancy__title" style="background-image:none;">Системный аналитик</a>
+          <div class="vacancy__attrs attrs">
+            <span class="attrs__item">Москва</span>
+            <span class="attrs__item">Полный рабочий день</span>
+            <strong class="attrs__item">от 80 000 руб.</strong>
+          </div>
+        </li>
+        <li class="content-list__item vacancy ">
+          <a href="https://moikrug.ru/vacancies/1000022236" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="content-list__item-link vacancy__title" style="background-image:none;">Backend iOS приложения: python, flask, mongo</a>
+          <div class="vacancy__attrs attrs">
+            <span class="attrs__item">Санкт-Петербург</span>
+            <span class="attrs__item">Полный рабочий день</span>
+            
+          </div>
+        </li>
+        <li class="content-list__item vacancy ">
+          <a href="https://moikrug.ru/vacancies/1000023542" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="content-list__item-link vacancy__title" style="background-image:none;">PHP-разработчик</a>
+          <div class="vacancy__attrs attrs">
+            <span class="attrs__item">Новосибирск</span>
+            <span class="attrs__item">Полный рабочий день</span>
+            
+          </div>
+        </li>
+    </ul>
+  </div>
+
+  <div class="promo-block__footer">
+    <a style="background-image:none;" href="https://moikrug.ru/" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="promo-block__footer-link">Создать резюме</a>
+
+    <a style="background-image:none;" href="https://moikrug.ru/info/service" data-utm="?utm_source=tm_geektimes&amp;utm_medium=tm_block&amp;utm_campaign=tm_promo" class="promo-block__footer-link">Разместить вакансию</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+        
+  <div class="columns-group__column promo-block promo-block_freelansim-tasks">
+    <h2 class="promo-block__title">
+      <a href="http://freelansim.ru/" target="_blank" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="icon_logo_freelansim"></a>
+      <a href="http://freelansim.ru/" target="_blank" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="promo-block__title-link">Заказы</a>
+    </h2>
+
+    <div class="promo-block__content">
+      <ul class="content-list content-list_promo">
+          <li class="content-list__item task ">
+            <a href="http://freelansim.ru/tasks/135131" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="content-list__item-link task__title">Копирайтер на проект</a>
+            <div class="task__attrs attrs">
+              <span class="attrs__item">29.01.2016</span>
+              <span class="attrs__item">0 откликов</span>
+              <strong class="attrs__item">Цена договорная</strong>
+
+            </div>
+          </li>
+          <li class="content-list__item task ">
+            <a href="http://freelansim.ru/tasks/134803" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="content-list__item-link task__title">Админка для системы управления серверами на Bootstrap</a>
+            <div class="task__attrs attrs">
+              <span class="attrs__item">29.01.2016</span>
+              <span class="attrs__item">2 отклика</span>
+              <strong class="attrs__item">10000 руб./за проект</strong>
+
+            </div>
+          </li>
+          <li class="content-list__item task ">
+            <a href="http://freelansim.ru/tasks/134399" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="content-list__item-link task__title">Магазин доменов на Wordpress</a>
+            <div class="task__attrs attrs">
+              <span class="attrs__item">21.01.2016</span>
+              <span class="attrs__item">5 откликов</span>
+              <strong class="attrs__item">60000 руб./в месяц</strong>
+
+            </div>
+          </li>
+          <li class="content-list__item task ">
+            <a href="http://freelansim.ru/tasks/135123" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="content-list__item-link task__title">Специалист по Google Adwords</a>
+            <div class="task__attrs attrs">
+              <span class="attrs__item">29.01.2016</span>
+              <span class="attrs__item">0 откликов</span>
+              <strong class="attrs__item">Цена договорная</strong>
+
+            </div>
+          </li>
+          <li class="content-list__item task ">
+            <a href="http://freelansim.ru/tasks/135121" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="content-list__item-link task__title">Mobile App (iOS &amp; Android)</a>
+            <div class="task__attrs attrs">
+              <span class="attrs__item">29.01.2016</span>
+              <span class="attrs__item">4 отклика</span>
+              <strong class="attrs__item">Цена договорная</strong>
+
+            </div>
+          </li>
+      </ul>
+    </div>
+
+    <div class="promo-block__footer">
+      <a href="http://freelansim.ru/" data-utm="?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="promo-block__footer-link">Зарегистрироваться</a>
+
+      <a href="http://freelansim.ru/?utm_source=geektimes&amp;utm_medium=referral&amp;utm_campaign=mainpage&amp;utm_content=block_freelansim" class="promo-block__footer-link">Разместить заказ</a>
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+    <div class="sidebar_right">
+      <div class="float_yandex_ad">
+        <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Banner 1 -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4098002249090227" data-ad-slot="3085458198" data-ad-format="auto"></ins>
+        <a href="https://special.geektimes.ru/advertising/" class="firskill__label">Реклама</a>
+
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+  </div>
+
+
+          <div class="clear"></div>
+
+          <div class="footer_panel">
+            <div id="footer">
+    <dl>
+      <dd><a href="https://geektimes.ru/auth/login/">Войти</a></dd>
+      <dd><a href="https://geektimes.ru/auth/register/">Регистрация</a></dd>
+    </dl>
+  <dl>
+    <dt>Разделы</dt>
+    <dd><a href="https://geektimes.ru/posts/top/">Публикации</a></dd>
+    <dd><a href="https://geektimes.ru/hubs/">Хабы</a></dd>
+    <dd><a href="https://geektimes.ru/companies/">Компании</a></dd>
+    <dd><a href="https://geektimes.ru/users/">Пользователи</a></dd>
+    <dd><a href="https://toster.ru/?_aa=press_anykey">Q&amp;A</a></dd>
+    <dd><a href="https://geektimes.ru/sandbox/">Песочница</a></dd>
+  </dl>
+  <dl>
+    <dt>Инфо</dt>
+    <dd><a href="https://geektimes.ru/info/about/">О сайте</a></dd>
+    <dd><a href="https://geektimes.ru/info/help/rules/">Правила</a></dd>
+    <dd><a href="https://geektimes.ru/info/help/">Помощь</a></dd>
+    <dd><a href="https://geektimes.ru/info/agreement/">Соглашение</a></dd>
+  </dl>
+  <dl>
+    <dt>Услуги</dt>
+    <dd><a href="https://special.geektimes.ru/advertising/">Реклама</a></dd>
+      <dd><a href="https://special.geektimes.ru/">Спецпроекты</a></dd>
+      <dd><a href="https://special.geektimes.ru/corporate/">Тарифы</a></dd>
+    <dd><a href="https://special.geektimes.ru/content/">Контент</a></dd>
+    <dd><a href="https://special.geektimes.ru/workshops/">Вебинары</a></dd>
+  </dl>
+  <dl>
+    <dt>Разное</dt>
+    <dd><a href="https://habrahabr.ru/apps/">Приложения Хабра</a></dd>
+    <dd><a href="https://special.habrahabr.ru/microsoft/mobile/" target="_blank">Тест-драйв</a></dd>
+      <dd><a href="https://special.habrahabr.ru/hello_startup/bizspark/" target="_blank">Помощь стартапам</a></dd>
+      <dd><a href="https://special.habrahabr.ru/#hr">Работа в IT</a></dd>
+  </dl>
+  <div class="copyright">
+    <div class="about">
+      <a href="https://tmtm.ru/">© TM</a>
+      <br><br>
+      <a href="https://geektimes.ru/feedback/">Служба поддержки</a><br><br>
+          <a href="https://m.geektimes.ru/post/253984/?mobile=yes">Мобильная версия</a><br><br>
+      <div class="social_accounts">
+        <a href="https://twitter.com/geektimes_ru" class="tw"></a>
+        <a href="https://www.facebook.com/geektimes.ru" class="fb"></a>
+        <a href="https://vk.com/geektimes" class="vk"></a>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <script type="text/javascript" src="./О развязке питания с примерами_files/jquery.cookie.js"></script>
+      <script type="text/javascript">
+        $(document).ready( function(){
+          window.tmidLogin = function(){ return false; };
+          if( $.cookie('tmid_no_check') == undefined ) {
+            var expire = new Date();
+            expire.setMinutes(expire.getMinutes() + 10 );
+            $.cookie('tmid_no_check', 1, { expires: expire } );
+            $.getScript("https://id.tmtm.ru/checklogin/", function(data){
+              if( window.tmidLogin() ) {
+
+                  var href = $('#login').attr('href');
+
+                  if( href !== undefined ) {
+                      window.location.href = href;
+                  }
+              }
+            });
+          }
+        });
+      </script>
+
+    <script type="text/javascript">
+  // global vars
+  var g_base_url = 'geektimes.ru';
+  var g_show_xpanel = false;
+  var g_base_fullurl = 'https://geektimes.ru/';
+  var g_is_guest = false;
+</script> 
+
+      <script type="text/javascript" src="./О развязке питания с примерами_files/shortcuts.js"></script>
+
+    <script type="text/javascript" src="./О развязке питания с примерами_files/global_footer_main.js"></script>
+
+    	<script type="text/javascript" src="./О развязке питания с примерами_files/saved_resource"></script>
+
+    
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        if (typeof (_yaparams) != 'undefined') {
+          w.yaCounter26722401 = new Ya.Metrika({
+            id: 26722401,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            params: _yaparams
+          });
+        } else {
+          w.yaCounter26722401 = new Ya.Metrika({
+            id: 26722401,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+          });
+        }
+      } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+  })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/26722401" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+
+    
+
+    
+
+
+  
+
+<div id="AutocompleteContainter_da763" style="position: absolute; z-index: 9999; top: 0px; left: 0px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_da763" style="display: none; width: 300px; max-height: 400px;"></div></div></div><div id="AutocompleteContainter_237ee" style="position: absolute; z-index: 9999; top: 2px; left: 0px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_237ee" style="display: none; width: 300px; max-height: 400px;"></div></div></div></body></html>
