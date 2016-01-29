@@ -1,0 +1,246 @@
+html, body { 
+ position: relative;
+ margin: 0px; 
+ padding: 0px; 
+ background: white url('img/body.jpg') repeat-y;
+ font-family: Arial;
+ font-size: 12px;
+ color: #464240;
+}
+
+div {
+ margin: 0px; 
+ padding: 0px;
+} 
+
+#header {
+ position: relative;
+ width: 100%;
+ height: 24px;
+ background: #317800 url('img/header.jpg') no-repeat;
+ color: white;
+ font-size: 20px;
+ text-transform: lowercase;
+ line-height: 1em;
+ white-space: nowrap;
+}
+
+#header a {
+ color: white;
+ text-decoration: none;
+}
+
+#header a img,
+#sitemap,
+#print {
+ width: 14px;
+ height: 16px;
+ margin: 0px; 
+ border-style: none;
+}
+
+#sitemap,
+#print {
+ display: block;
+ position: absolute;
+ top: 3px;
+ left: 18px;
+ z-index: 1;
+}
+ 
+#print {left: 44px;}
+
+#title {margin-left: 80px;}
+
+#menu {
+ position: relative;
+ width: 100%;
+ min-height: 70px;
+ * height: 70px;
+ background-color: white;
+}
+
+#menu,
+div.dropDownMenu {
+ font-size: 12px;
+ font-style: italic;
+ font-weight: bold;
+}
+
+#menu a,
+div.dropDownMenu div a {color: #464240 !important;} 
+#menu a:hover,
+div.dropDownMenu div a:hover {color: #3B9000 !important;}
+
+div.dropDownMenu {
+ position: absolute;
+ z-index: 3;
+ display: none;
+ background-color: white;
+ padding: 3px 10px 5px 5px;
+ * padding-top: 2px;
+ border-style: none solid solid none;
+ border-width: 1px;
+ border-color: gray;
+} 
+
+div.dropDownMenu div {padding: 0.2em 0em;}  
+
+#logo {
+ display: block;
+ position: absolute;
+ top: 6px;
+ left: 7px;
+ z-index: 1;   
+}
+
+#logo,
+#logo img {
+ width: 59px;
+ height: 58px;
+ border-style: none;
+ margin: 0px;
+}
+
+#bread_crumbs {
+ color: #3B9000;
+ padding: 13px 8px 4px 84px;
+ line-height: 1.5em;
+} 
+
+div.level_menu {
+ padding: 4px 8px 7px 84px;
+ line-height: 1.5em;
+ display: none;
+}
+#lastLevel {display: block;} 
+
+#bread_crumbs a,
+#bread_crumbs span,
+div.level_menu a {white-space: nowrap;}
+
+div.level_menu span {margin: 0px 6px;}
+
+div.level_menu .active {
+ margin: 0px;
+ color: #3B9000;
+}
+
+#bread_crumbs img,
+div.dropDownMenu div img {
+ width: 11px;
+ height: 8px;
+ margin: 0px 6px;
+}
+
+#container {
+ position: relative; 
+ background-color: transparent;
+} 
+
+#right { 
+ background-color: transparent;
+ position: relative;
+ float: right;
+ width: 272px;
+ padding: 1px;
+}
+
+#right a.empty_ad {
+ display: block;
+ height: 220px;
+ margin: 16px; 
+ background-color: black; 
+ color: white; 
+ font-style: italic; 
+ font-weight: 20px; 
+ padding: 180px 16px 0px 16px;  
+ text-align: center;
+ text-decoration: none; 
+ font-size: 20px; 
+}
+
+#left { 
+ position: relative; 
+ margin-right: 272px;
+ padding: 16px 16px 16px 84px;
+ * padding-right: 0px;  
+ font-family: Verdana;
+ font-size: 12px;
+ height: 1%;
+ /* min-height: 400px;
+ _height: expression(document.getElementById('content').innerHeight > 500 ? document.getElementById('content').innerHeight : '500px'); */
+}
+
+#content {
+ position: relative;
+ height: 1%;
+ * width: 95%;
+}
+
+#footer {
+ position: relative;
+ border-top: 1px solid gray;
+ font-size: 10px;
+ margin-top: 4em;
+ padding: 0.7em 15px 1.5em 15px;
+}
+
+#footer p {margin: 0.3em 0em;}
+
+.clear {
+ clear: both;
+ height: 1px;
+ font-size: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {margin: 1.5em 0em 0em 0em; font-weight: normal; font-family: Arial;}
+h1, h2, h3 {text-transform: uppercase;}
+#h1 {font-size: 24px; margin-top: 0px;}
+h1 {font-size: 22px;}
+h2 {font-size: 20px;}
+h3 {font-size: 18px;}
+h4 {font-size: 16px;}
+h5 {font-size: 14px;}
+h6 {font-size: 12px;}
+
+p {
+ margin: 0.8em 0em;
+ position: relative;
+}
+
+a {color: #0000FF;}
+a:hover {color: #0000BB;}
+a:visited {color: #0000BB;}
+
+ul, ol {
+ list-style-type: square;                   
+ list-style-position: inside;
+ margin: 0.9em 0em;
+ padding: 0px;
+}
+
+ol {list-style-type: decimal;}
+
+ul li ul,
+ul li ol,
+ol li ul,
+ol li ol,
+blockquote {
+ margin: 0px 0px 0px 2em;
+}
+
+blockquote {padding: 0px;}
+
+#messages, 
+#errors {
+ padding: 0px 30px;
+ margin: 15px;
+ border: 1px dashed gray;
+ float: left;
+}
+
+#errors {
+ border-color: #CC0000;
+ color: #CC0000;
+}
